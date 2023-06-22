@@ -9,7 +9,7 @@ name: Gene Kim
 description: Gene is a rising senior at Stanford University studying Symbolic Systems, with a concentration in Human-Computer Interaction. He is passionate about using technology for social good and accessibility efforts. His past research contributions include auto-generated screen reader accessible data visualization, haptic wearable gloves to support remote education of blind students, and machine embroidered raised-line diagrams to allow non-visual interpretation of diagrams. This webpage documents his 2023 summer research with Doctor Megan Hofmann at Northeastern University, made possible by the support of the Distributed Research Experience for Undergraduates program.
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: https://myname.github.io/images/gk.jpg
+avatar: https://geneshkim.github.io/images/gk.jpg
 
 #
 # Flags below are optional
@@ -18,7 +18,7 @@ avatar: https://myname.github.io/images/gk.jpg
 # Includes an icon in the footer for each username you enter
 footer-links:
   dribbble:
-  email: yourmail@mail.com
+  email: gene.sh.kim@stanford.edu
   facebook:
   flickr:
   rss: # just type anything here for a working RSS icon
