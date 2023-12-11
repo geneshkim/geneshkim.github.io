@@ -15,7 +15,7 @@ Gene is a rising senior at Stanford University studying Symbolic Systems, with a
 Megan Hofmann is an Assistant Professor of Computer Science and Mechanical Engineering at the Khoury College of Computer Sciences at Northeastern University where she directs the Accessible Creative Technologies (ACT) Lab.
 Megan is a leading accessibility and fabrication researcher. Her work on the emerging area of Medical Making, the application of digital fabrication in healthcare, has won multiple best-paper awards at ACM-CHI and Assets and the 2022 SIGCHI Outstanding Dissertation award. Additionally, she is a leader in the burgeoning field of Automatic Machine Knitting.
 She received her PhD in Human-Computer Interaction from Carnegie Mellon University in 2022.
-(https://www.megan-hofmann.com/ "Learn more about my mentor at her website.")
+[ "Learn more about my mentor at her website.](https://www.megan-hofmann.com/")
 
 
 ## About My Project
