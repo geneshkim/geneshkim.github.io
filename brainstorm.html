@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Initial Designs and Brainstorm | Hi-5v | ME 210 Final Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <button class="menu-toggle">Menu</button>
+    <nav class="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="brainstorm.html">Initial Designs and Brainstorm</a></li>
+            <li><a href="results.html">Final Design</a></li>
+            <li><a href="conclusion.html">Conclusion and Takeaways</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+<h2>Product Nucleus and MVP</h2>
+<p>
+Inspired by a guest talk given by Steve Myers, our team began by determining and decomposing the necessary functionality of our robot. We identified features of our robot that are absolutely required (MVP), features that are exciting but should have less priority, and features that would only be implemented if we had too much time on our hands. Below is the summary of our task break down
+</p>
+<h3>Required Functions</h3>
+<ol>
+    <li>Driving and Turning
+        <ol type="a">
+            <li>Turning in Place</li>
+            <li>Touching contact zone</li>
+        </ol>
+    </li>
+    <li>Line Following
+        <ol type="a">
+            <li>Orient in start zone</li>
+            <li>Get out of the start place and follow tape line 1</li>
+            <li>Find tape line 2 (drive forward)</li>
+            <li>Turning to contact zone</li>
+        </ol>
+    </li>
+    <li>Sensing
+        <ol type="a">
+            <li>IR sensing the shooting goal</li>
+            <li>Turning to contact zone (IR)</li>
+        </ol>
+    </li>
+    <li>Shooting
+        <ol type="a">
+            <li>Ball storage</li>
+        </ol>
+    </li>
+    <li>Required buttons
+        <ol type="a">
+            <li>Emergency stop switch</li>
+            <li>Button during startup
+                <ol type="i">
+                    <li>Orient in start zone</li>
+                </ol>
+            </li>
+        </ol>
+    </li>
+    <li>Celebration</li>
+</ol>
+
+<h3>Nice to Have</h3>
+<ul>
+    <li>Confirming touch</li>
+    <li>Line to Ramp</li>
+    <li>Going up Ramp</li>
+</ul>
+
+<h3>Really Nice to Have</h3>
+<ul>
+    <li>Cable Management</li>
+    <li>Aesthetic</li>
+</ul>
+
+<h2>Our plan of attack</h2>
+<p>
+Blow is a table detailing our breakdown of tackling the required features of our robot.
+</p>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Task</th>
+            <th>Features/how to do it</th>
+            <th>Equipment needed</th>
+            <th>How to test</th>
+            <th>Milestone Date / Assignments</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Driving and Turning</td>
+            <td>
+                <ul>
+                    <li>H-bridge to control direction (Forward - HIGH, LOW; Reverse - LOW, HIGH)</li>
+                    <li>Speed - PWM Input Signal</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>2+ wheels</li>
+                    <li>2+ high torque motors</li>
+                    <li>H-bridge</li>
+                    <li>Motor control libraries</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Drive motors at variable speed (forward, backward, change speed)</li>
+                    <li>Freely change direction (turn left, turn right)</li>
+                </ul>
+            </td>
+            <td>Dylan & Coco<br>Ideal deadline: Feb 27<br>Hard deadline: Mar 1</td>
+        </tr>
+        <tr>
+            <td>Turning Input Button</td>
+            <td>
+                <ul>
+                    <li>Push button, start turning, push button again, stop turning & start tasks</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Input Button</li>
+                </ul>
+            </td>
+            <td>Set robot in random direction, pick target direction, and robot can get to target direction</td>
+            <td>Dylan & Coco<br>Deadline Mar 1</td>
+        </tr>
+        <tr>
+            <td>Line Following</td>
+            <td>
+                <ul>
+                    <li>Sense black line with multiple downward sensors</li>
+                    <li>Use sensor to continually readjust back to line</li>
+                    <li>Try to center over center IR</li>
+                    <li>If Left Lost, Right Sense: Turn Right</li>
+                    <li>Right Lost, Left Sense: Turn Left</li>
+                    <li>If all three sense @ same time (at T zone), lose line & go forward</li>
+                    <li>Go different direction from getting out of start zone to contact zone (track initial turn)</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>3 IR sensors</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Put the robot on a line can it sense the line</li>
+                    <li>Move it off to the left (do the sensors give correct values)</li>
+                    <li>Move it off to the right (do the sensors give correct values)</li>
+                    <li>Integrated with driving/turning: can it follow a curved line</li>
+                </ul>
+            </td>
+            <td>Gene<br>Ideal deadline: Feb 27<br>Hard deadline: Mar 1</td>
+        </tr>
+        <tr>
+            <td>Touch Sensing</td>
+            <td>Robot gets close enough to shooting zone</td>
+            <td>
+                <ul>
+                    <li>Pressure sensor / push sensor?</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Does robot drive forward until touch sensor sense a wall</li>
+                    <li>Combined with IR: Robot can approach and reach the source of IR signal and stop when touches wall</li>
+                </ul>
+            </td>
+            <td>Liam<br>Ideal deadline: Feb 27<br>Hard deadline: Mar 1</td>
+        </tr>
+        <tr>
+            <td>IR Sensing</td>
+            <td>
+                <ul>
+                    <li>Sense 3333 Hz IR Beacon 8” above field</li>
+                    <li>Able to sense IR signal direction (by turning)</li>
+                </ul>
+            </td>
+            <td>IR signal sensor (from only one direction so if turn and signal get stronger have an idea of signal direction)</td>
+            <td>
+                <ul>
+                    <li>If output IR signal, can the robot detect it</li>
+                    <li>If facing signal detection is stronger</li>
+                    <li>If facing away from signal detection is weaker</li>
+                </ul>
+            </td>
+            <td>Gene<br>Ideal deadline: Feb 27<br>Hard deadline: Mar 1</td>
+        </tr>
+        <tr>
+            <td>Shooting</td>
+            <td>
+                <ul>
+                    <li>Balls deposit 4.2” above the ground (clearing the wall)</li>
+                    <li>Opening at top for 5 balls for loading at start of game</li>
+                    <li>Gate holding the balls back until time for release</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Tube or carrying container</li>
+                    <li>Servo for opening gate or tilting container</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>Upon gate release, balls all roll out in one direction above 4 inches off the ground</li>
+                    <li>Balls don’t fall out at max robot speed</li>
+                </ul>
+            </td>
+            <td>Liam<br>Ideal deadline: Feb 27<br>Hard deadline: Mar 1</td>
+        </tr>
+        <tr>
+            <td>Emergency stop switch</td>
+            <td>Emergency stop switch that cuts all power</td>
+            <td>
+                <ul>
+                    <li>Circuit Breaker</li>
+                    <li>Switch</li>
+                </ul>
+            </td>
+            <td>In all states, emergency switch cuts power</td>
+            <td>Everyone<br>Deadline March 1</td>
+        </tr>
+        <tr>
+            <td>Celebration</td>
+            <td>Servo with pom poms attached moves back and forth</td>
+            <td>
+                <ul>
+                    <li>Servo</li>
+                    <li>Mini pom pom</li>
+                </ul>
+            </td>
+            <td>
+                <ul>
+                    <li>After shooting darts/once course is completed, robot does pom pom wave</li>
+                    <li>At 2:10 minute completion time does the pom pom wave</li>
+                </ul>
+            </td>
+            <td>Everyone<br>Ideal deadline: Feb 27<br>Hard deadline: Mar 1</td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Initial Schematics and State Diagrams</h2>
+<p>Below are the initial state diagrams and design schematics of each of the sub-systems outlined by our required features brainstorm.</p>
+<h3>Overall Initial Diagram</h3>
+<img class="figure" src="images/initial.png" alt="shooting state diagram"/>
+
+
+<h3>Line Sensing</h3>
+<img class="figure" src="images/Line.jpg" alt="line sensing state diagram"/>
+
+<h3>Exiting Start Box</h3>
+<img class="figure" src="images/Exit.png" alt="exiting start zone state diagram"/>
+
+<h3>Touching Contact Zone</h3>
+<img class="figure" src="images/Contact.png" alt="contact zone  state diagram"/>
+
+<h3>Shooting</h3>
+<img class="figure" src="images/Shooting.jpg" alt="shooting state diagram"/>
+
+<h3>Motor diagram</h3>
+<img class="figure" src="images/Motor.png" alt="shooting state diagram"/>
+
+<h3>IR Sensor diagram</h3>
+<img class="figure" src="images/IR.png" alt="shooting state diagram"/>
+
+<h3>Orienting/Starting buttons diagram</h3>
+<img class="figure" src="images/Buttons.png" alt="shooting state diagram"/>
+
+<h3>Battery diagram</h3>
+<img class="figure" src="images/Battery.png" alt="shooting state diagram"/>
+
+<h3>Shooting gate diagram</h3>
+<img class="figure" src="images/Gate.png" alt="shooting state diagram"/>
+
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+.navigation {
+    display: none;
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+}
+
+.navigation li {
+    padding: 10px 0;
+}
+
+.navigation a {
+    color: white;
+    text-decoration: none;
+}
+
+.team-photo {
+    width: 100%;
+    height: auto;
+}
+
+.team-member {
+    text-align: center;
+}
+
+.team-member img {
+    width: 100px;
+    height: auto;
+}
+
+
+.figure {
+    max-width: 55%; /* makes image responsive, ensuring it doesn't overflow the container */
+    height: auto; /* maintains aspect ratio */
+    display: block; /* prevents inline spacing issues */
+    margin: 0 auto 20px; /* centers the image and adds some space below */
+    border-radius: 4px; /* optional: adds rounded corners to images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* optional: adds a subtle shadow for a 3D effect */
+}
+
+
+/* This CSS goes in your style.css file or within a <style> tag in the <head> of your HTML document */
+
+video {
+    width: 100%;
+    max-width: 640px;
+    max-height: 540px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
