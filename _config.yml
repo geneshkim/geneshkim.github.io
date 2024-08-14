@@ -1,0 +1,6 @@
+url: "https://geneshkim.com/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+title: "Gene S-H Kim" # the name of your site, e.g. ACME Corp.
+description: "Human-Computer Interaction Researcher, Disability Rights Advocate, Speaker"
+keywords: "Gene S-H Kim, Gene Sung-Ho Kim, HCI, accessibility, researcher"
+author: "Gene S-H Kim" 
