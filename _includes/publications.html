@@ -9,7 +9,10 @@
           <a href="{{ item.conference_url }}">{{ item.conference_name }}</a>.
         </p>
         <p>
-          {{ item.paper_type }}. Acceptance Rate: {{ item.acceptance_rate }}.
+          {{ item.paper_type }}.
+          {% if item.acceptance_rate %}
+            Acceptance Rate: {{ item.acceptance_rate }}.
+          {% endif %}
           {% if item.award %}
             Award: {{ item.award }}.
           {% endif %}
@@ -24,7 +27,10 @@
           <a href="{{ item.conference_url }}">{{ item.conference_name }}</a>.
         </p>
         <p>
-          {{ item.paper_type }}. Acceptance Rate: {{ item.acceptance_rate }}.
+          {{ item.paper_type }}.
+          {% if item.acceptance_rate %}
+            Acceptance Rate: {{ item.acceptance_rate }}.
+          {% endif %}
           {% if item.award %}
             Award: {{ item.award }}.
           {% endif %}
