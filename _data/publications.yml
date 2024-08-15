@@ -1,105 +1,105 @@
 featured:
-- {title: 'Tangible Stats: An Embodied and Multimodal Platform for Teaching Data and Statistics to Blind and Low Vision Students',
-  authors: 'Danyang Fan, Gene S-H Kim, Olivia Tomassetti, Shloke Nirav Patel, Sile O'Modhrain, Victor R Lee, Sean Follmer',
-  conference_name: 'In Proc. CHI EA24',
-  conference_url: 'https://dl.acm.org/doi/proceedings/10.1145/3613905?tocHeading=heading5',
-  paper_type: '(Short paper)',
-  acceptance_rate: '26%',
-  overview: 'This paper tests the predictions of general relativity using data from present and future astrophysical observations, providing new insights into gravitational wave signals.'}
+- title: 'Tangible Stats: An Embodied and Multimodal Platform for Teaching Data and Statistics to Blind and Low Vision Students'
+  authors: 'Danyang Fan, Gene S-H Kim, Olivia Tomassetti, Shloke Nirav Patel, Sile O'Modhrain, Victor R Lee, Sean Follmer'
+  conference_name: 'In Proc. CHI EA24'
+  conference_url: 'https://dl.acm.org/doi/proceedings/10.1145/3613905?tocHeading=heading5'
+  paper_type: '(Short paper)'
+  acceptance_rate: '26%'
+  overview: 'This paper tests the predictions of general relativity using data from present and future astrophysical observations, providing new insights into gravitational wave signals.'
 
-- {title: 'Developing and Deploying a Real-World Solution for Accessible Slide Reading and Authoring for Blind Users',
-  authors: 'Zhuohao Zhang, Gene S-H Kim, Jacob O Wobbrock',
-  conference_name: 'In Proc. ASSETS23',
-  conference_url: 'https://assets23.sigaccess.org/',
-  paper_type: '(Full paper)',
-  acceptance_rate: '30%',
-  overview: 'T	his study presents new low shear diffusion central schemes that improve the accuracy and efficiency of particle methods in computational physics.'}
+- title: 'Developing and Deploying a Real-World Solution for Accessible Slide Reading and Authoring for Blind Users'
+  authors: 'Zhuohao Zhang, Gene S-H Kim, Jacob O Wobbrock'
+  conference_name: 'In Proc. ASSETS23'
+  conference_url: 'https://assets23.sigaccess.org/'
+  paper_type: '(Full paper)'
+  acceptance_rate: '30%'
+  overview: 'T	his study presents new low shear diffusion central schemes that improve the accuracy and efficiency of particle methods in computational physics.'
 
-- {title: 'Supporting accessible data visualization through audio data narratives',
-  authors: 'Alexa Siu, Gene S-H Kim, Sile O'Modhrain, Sean Follmer',
-  conference_name: 'In Proc. CHI22',
-  conference_url: 'https://astrophysics-conference.com/2023',
-  paper_type: '(Full Paper)',
-  acceptance_rate: '24.6%',
-  overview: 'This paper tests the predictions of general relativity using data from present and future astrophysical observations, providing new insights into gravitational wave signals.'}
+- title: 'Supporting accessible data visualization through audio data narratives'
+  authors: 'Alexa Siu, Gene S-H Kim, Sile O'Modhrain, Sean Follmer'
+  conference_name: 'In Proc. CHI22'
+  conference_url: 'https://astrophysics-conference.com/2023'
+  paper_type: '(Full Paper)'
+  acceptance_rate: '24.6%'
+  overview: 'This paper tests the predictions of general relativity using data from present and future astrophysical observations, providing new insights into gravitational wave signals.'
 
-- {title: 'COVID-19 highlights the issues facing blind and visually impaired people in accessing data on the web',
-  authors: 'Alexa Siu, Danyang Fan, Gene S-H Kim, Hrishikesh V Rao, Xavier Vazquez, Sile O'Modhrain, Sean Follmer',
-  conference_name: 'In Proc. W4A21',
-  conference_url: 'https://www.w4a.info/2021/',
-  paper_type: '(Full paper)',
-  acceptance_rate: '46%',
-  award: 'Best paper nominee (top 4%)',
-  overview: 'The research explores how shock interactions and turbulence contribute to the formation of the stellar mass spectrum.'}
+- title: 'COVID-19 highlights the issues facing blind and visually impaired people in accessing data on the web'
+  authors: 'Alexa Siu, Danyang Fan, Gene S-H Kim, Hrishikesh V Rao, Xavier Vazquez, Sile O'Modhrain, Sean Follmer'
+  conference_name: 'In Proc. W4A21'
+  conference_url: 'https://www.w4a.info/2021/'
+  paper_type: '(Full paper)'
+  acceptance_rate: '46%'
+  award: 'Best paper nominee (top 4%)'
+  overview: 'The research explores how shock interactions and turbulence contribute to the formation of the stellar mass spectrum.'
 
 
 index:
-- {title: 'Tangible Stats: An Embodied and Multimodal Platform for Teaching Data and Statistics to Blind and Low Vision Students',
-  authors: 'Danyang Fan, Gene S-H Kim, Olivia Tomassetti, Shloke Nirav Patel, Sile O'Modhrain, Victor R Lee, Sean Follmer',
-  conference_name: 'In Proc. CHI EA24',
-  conference_url: 'https://dl.acm.org/doi/proceedings/10.1145/3613905?tocHeading=heading5',
-  paper_type: '(Short Paper)',
-  acceptance_rate: '26%',
-  overview: 'This paper tests the predictions of general relativity using data from present and future astrophysical observations, providing new insights into gravitational wave signals.'}
+- title: 'Tangible Stats: An Embodied and Multimodal Platform for Teaching Data and Statistics to Blind and Low Vision Students'
+  authors: 'Danyang Fan, Gene S-H Kim, Olivia Tomassetti, Shloke Nirav Patel, Sile O'Modhrain, Victor R Lee, Sean Follmer'
+  conference_name: 'In Proc. CHI EA24'
+  conference_url: 'https://dl.acm.org/doi/proceedings/10.1145/3613905?tocHeading=heading5'
+  paper_type: '(Short Paper)'
+  acceptance_rate: '26%'
+  overview: 'This paper tests the predictions of general relativity using data from present and future astrophysical observations, providing new insights into gravitational wave signals.'
 
-- {title: 'A Case for Improving the Accessibility of Electrical and Computer Engineering Education–Starting with a Blind Student's Autoethnography',
-  authors: 'Trisha Kulkarni, Gene S-H Kim, Aya Mouallem',
-  conference_name: 'In Proc. ASSETS23',
-  conference_url: 'https://assets23.sigaccess.org/',
-  paper_type: '(Experience report)',
-  acceptance_rate: '31.8%',
-  overview: 'T	his study presents new low shear diffusion central schemes that improve the accuracy and efficiency of particle methods in computational physics.'}
+- title: 'A Case for Improving the Accessibility of Electrical and Computer Engineering Education–Starting with a Blind Student's Autoethnography'
+  authors: 'Trisha Kulkarni, Gene S-H Kim, Aya Mouallem'
+  conference_name: 'In Proc. ASSETS23'
+  conference_url: 'https://assets23.sigaccess.org/'
+  paper_type: '(Experience report)'
+  acceptance_rate: '31.8%'
+  overview: 'T	his study presents new low shear diffusion central schemes that improve the accuracy and efficiency of particle methods in computational physics.'
 
-- {title: 'Developing and Deploying a Real-World Solution for Accessible Slide Reading and Authoring for Blind Users',
-  authors: 'Zhuohao Zhang, Gene S-H Kim, Jacob O Wobbrock',
-  conference_name: 'In Proc. ASSETS23',
-  conference_url: 'https://assets23.sigaccess.org/',
-  paper_type: '(Full paper)',
-  acceptance_rate: '30%',
-  overview: 'T	his study presents new low shear diffusion central schemes that improve the accuracy and efficiency of particle methods in computational physics.'}
+- title: 'Developing and Deploying a Real-World Solution for Accessible Slide Reading and Authoring for Blind Users'
+  authors: 'Zhuohao Zhang, Gene S-H Kim, Jacob O Wobbrock'
+  conference_name: 'In Proc. ASSETS23'
+  conference_url: 'https://assets23.sigaccess.org/'
+  paper_type: '(Full paper)'
+  acceptance_rate: '30%'
+  overview: 'T	his study presents new low shear diffusion central schemes that improve the accuracy and efficiency of particle methods in computational physics.'
 
-- {title: 'OPTIMISM: Enabling Collaborative Implementation of Domain Specific Metaheuristic Optimization',
-  authors: 'Megan Hofmann, Nayha Auradkar, Jessica Birchfield, Jerry Cao, Autumn G Hughes, Gene SH Kim, Shriya Kurpad, Kathryn J Lum, Kelly Mack, Anisha Nilakantan, Margaret Ellen Seehorn, Emily Warnock, Jennifer Mankoff, Scott E Hudson',
-  conference_name: 'In Proc. CHI23',
-  conference_url: 'https://dl.acm.org/doi/proceedings/10.1145/3544548',
-  paper_type: '(Full Paper)',
-  acceptance_rate: '27.6%',
-  overview: 'This paper tests the predictions of general relativity using data from present and future astrophysical observations, providing new insights into gravitational wave signals.'}
+- title: 'OPTIMISM: Enabling Collaborative Implementation of Domain Specific Metaheuristic Optimization'
+  authors: 'Megan Hofmann, Nayha Auradkar, Jessica Birchfield, Jerry Cao, Autumn G Hughes, Gene SH Kim, Shriya Kurpad, Kathryn J Lum, Kelly Mack, Anisha Nilakantan, Margaret Ellen Seehorn, Emily Warnock, Jennifer Mankoff, Scott E Hudson'
+  conference_name: 'In Proc. CHI23'
+  conference_url: 'https://dl.acm.org/doi/proceedings/10.1145/3544548'
+  paper_type: '(Full Paper)'
+  acceptance_rate: '27.6%'
+  overview: 'This paper tests the predictions of general relativity using data from present and future astrophysical observations, providing new insights into gravitational wave signals.'
 
-- {title: 'The accessibility of data visualizations on the web for screen reader users: Practices and experiences during covid-19',
-  authors: 'Danyang Fan, Alexa Fay Siu, Hrishikesh Rao, Gene Sung-Ho Kim, Xavier Vazquez, Lucy Greco, Sile O'Modhrain, Sean Follmer',
-  conference_name: 'TACCESS',
-  conference_url: 'https://www.w4a.info/2021/',
-  paper_type: '(Full paper)',
-  overview: 'The research explores how shock interactions and turbulence contribute to the formation of the stellar mass spectrum.'}
+- title: 'The accessibility of data visualizations on the web for screen reader users: Practices and experiences during covid-19'
+  authors: 'Danyang Fan, Alexa Fay Siu, Hrishikesh Rao, Gene Sung-Ho Kim, Xavier Vazquez, Lucy Greco, Sile O'Modhrain, Sean Follmer'
+  conference_name: 'TACCESS'
+  conference_url: 'https://www.w4a.info/2021/'
+  paper_type: '(Full paper)'
+  overview: 'The research explores how shock interactions and turbulence contribute to the formation of the stellar mass spectrum.'
 
-- {title: 'Enhancing access to high quality tangible information through machine embroidered tactile graphics',
-  authors: 'Margaret Ellen Seehorn*, Gene S-H Kim*, Aashaka Desai, Megan Hofmann, Jennifer Mankoff',
-  conference_name: 'In Proc. SCF22',
-	  conference_url: 'https://dl.acm.org/doi/proceedings/10.1145/3559400',
-  paper_type: '(Short paper)',
-  overview: 'The research explores how shock interactions and turbulence contribute to the formation of the stellar mass spectrum.'}
+- title: 'Enhancing access to high quality tangible information through machine embroidered tactile graphics'
+  authors: 'Margaret Ellen Seehorn*, Gene S-H Kim*, Aashaka Desai, Megan Hofmann, Jennifer Mankoff'
+  conference_name: 'In Proc. SCF22'
+	  conference_url: 'https://dl.acm.org/doi/proceedings/10.1145/3559400'
+  paper_type: '(Short paper)'
+  overview: 'The research explores how shock interactions and turbulence contribute to the formation of the stellar mass spectrum.'
 
-- {title: 'Supporting accessible data visualization through audio data narratives',
-  authors: 'Alexa Siu, Gene S-H Kim, Sile O'Modhrain, Sean Follmer',
-  conference_name: 'In Proc. CHI22',
-  conference_url: 'https://dl.acm.org/journal/taccess',
-  paper_type: '(Full Paper)',
-  overview: 'This paper tests the predictions of general relativity using data from present and future astrophysical observations, providing new insights into gravitational wave signals.'}
+- title: 'Supporting accessible data visualization through audio data narratives'
+  authors: 'Alexa Siu, Gene S-H Kim, Sile O'Modhrain, Sean Follmer'
+  conference_name: 'In Proc. CHI22'
+  conference_url: 'https://dl.acm.org/journal/taccess'
+  paper_type: '(Full Paper)'
+  overview: 'This paper tests the predictions of general relativity using data from present and future astrophysical observations, providing new insights into gravitational wave signals.'
 
-- {title: 'COVID-19 highlights the issues facing blind and visually impaired people in accessing data on the web',
-  authors: 'Alexa Siu, Danyang Fan, Gene S-H Kim, Hrishikesh V Rao, Xavier Vazquez, Sile O'Modhrain, Sean Follmer',
-  conference_name: 'In Proc. W4A21',
-  conference_url: 'https://www.w4a.info/2021/',
-  paper_type: '(Full paper)',
-  acceptance_rate: '46%',
-  award: 'Best paper nominee (top 4%)',
-  overview: 'The research explores how shock interactions and turbulence contribute to the formation of the stellar mass spectrum.'}
+- title: 'COVID-19 highlights the issues facing blind and visually impaired people in accessing data on the web'
+  authors: 'Alexa Siu, Danyang Fan, Gene S-H Kim, Hrishikesh V Rao, Xavier Vazquez, Sile O'Modhrain, Sean Follmer'
+  conference_name: 'In Proc. W4A21'
+  conference_url: 'https://www.w4a.info/2021/'
+  paper_type: '(Full paper)'
+  acceptance_rate: '46%'
+  award: 'Best paper nominee (top 4%)'
+  overview: 'The research explores how shock interactions and turbulence contribute to the formation of the stellar mass spectrum.'
 
-- {title: 'PantoGuide: A Haptic and Audio Guidance System To Support Tactile Graphics Exploration',
-  authors: 'Elyse DZ Chase*, Alexa Siu*, Abena Boadi-Agyemang**, Gene S-H Kim**, Eric J Gonzalez, Sean Follmer',
-  conference_name: 'In Proc. ASSETS20',
-  conference_url: 'https://assets20.sigaccess.org/',
-  paper_type: '(Short paper)',
-  acceptance_rate: '61.5%',
-  overview: 'The research explores how shock interactions and turbulence contribute to the formation of the stellar mass spectrum.'}
+- title: 'PantoGuide: A Haptic and Audio Guidance System To Support Tactile Graphics Exploration'
+  authors: 'Elyse DZ Chase*, Alexa Siu*, Abena Boadi-Agyemang**, Gene S-H Kim**, Eric J Gonzalez, Sean Follmer'
+  conference_name: 'In Proc. ASSETS20'
+  conference_url: 'https://assets20.sigaccess.org/'
+  paper_type: '(Short paper)'
+  acceptance_rate: '61.5%'
+  overview: 'The research explores how shock interactions and turbulence contribute to the formation of the stellar mass spectrum.'
