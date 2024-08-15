@@ -3,31 +3,33 @@
     <h3 class="fw-bold border-bottom pb-3 mb-5">Publications</h3>
     {% if page.title == "Home" %}
       {% for item in site.data.publications.featured %}
+        <h3>{{ item.title }}</h3>
         <p>
-          <strong>{{ item.name }}</strong><br>
-          {{ item.authors }}<br>
-          <a href="{{ item.url }}">[PDF]</a><br>
-          <em>{{ item.conference }}</em><br>
-          Published: {{ item.date }}<br>
-          Acceptance Rate: {{ item.acceptance_rate }}<br>
+          {{ item.authors }}. 
+          <a href="{{ item.conference_url }}">{{ item.conference_name }}</a>.
+        </p>
+        <p>
+          {{ item.paper_type }}. Acceptance Rate: {{ item.acceptance_rate }}.
           {% if item.award %}
-            <strong>Award: {{ item.award }}</strong><br>
+            Award: {{ item.award }}.
           {% endif %}
         </p>
+        <p>{{ item.overview }}</p>
       {% endfor %}
     {% else %}
       {% for item in site.data.publications.index %}
+        <h3>{{ item.title }}</h3>
         <p>
-          <strong>{{ item.name }}</strong><br>
-          {{ item.authors }}<br>
-          <a href="{{ item.url }}">[PDF]</a><br>
-          <em>{{ item.conference }}</em><br>
-          Published: {{ item.date }}<br>
-          Acceptance Rate: {{ item.acceptance_rate }}<br>
+          {{ item.authors }}. 
+          <a href="{{ item.conference_url }}">{{ item.conference_name }}</a>.
+        </p>
+        <p>
+          {{ item.paper_type }}. Acceptance Rate: {{ item.acceptance_rate }}.
           {% if item.award %}
-            <strong>Award: {{ item.award }}</strong><br>
+            Award: {{ item.award }}.
           {% endif %}
         </p>
+        <p>{{ item.overview }}</p>
       {% endfor %}
     {% endif %}
   </div>
