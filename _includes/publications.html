@@ -3,11 +3,31 @@
     <h3 class="fw-bold border-bottom pb-3 mb-5">Publications</h3>
     {% if page.title == "Home" %}
       {% for item in site.data.publications.featured %}
-        <p><a href="{{ item.url }}">{{ item.name }}</a></p>
+        <p>
+          <strong>{{ item.name }}</strong><br>
+          {{ item.authors }}<br>
+          <a href="{{ item.url }}">[PDF]</a><br>
+          <em>{{ item.conference }}</em><br>
+          Published: {{ item.date }}<br>
+          Acceptance Rate: {{ item.acceptance_rate }}<br>
+          {% if item.award %}
+            <strong>Award: {{ item.award }}</strong><br>
+          {% endif %}
+        </p>
       {% endfor %}
     {% else %}
       {% for item in site.data.publications.index %}
-        <p><a href="{{ item.url }}">{{ item.name }}</a></p>
+        <p>
+          <strong>{{ item.name }}</strong><br>
+          {{ item.authors }}<br>
+          <a href="{{ item.url }}">[PDF]</a><br>
+          <em>{{ item.conference }}</em><br>
+          Published: {{ item.date }}<br>
+          Acceptance Rate: {{ item.acceptance_rate }}<br>
+          {% if item.award %}
+            <strong>Award: {{ item.award }}</strong><br>
+          {% endif %}
+        </p>
       {% endfor %}
     {% endif %}
   </div>
