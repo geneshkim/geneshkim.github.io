@@ -2,6 +2,7 @@
 layout: default
 ---
 
+<!--
 <div class="row g-5 mb-5">
   <div class="col-md-6">
     <h3 class="fw-bold">Welcome</h3>
@@ -11,6 +12,18 @@ layout: default
     <img src="{{ site.github.url }}/assets/img/genekim.jpg" alt="A photo of Gene, a Korean-American man smiling against a background with green trees. He has thick straight black hair that is longer on the front and shorter on the sides. He is wearing a blue collared shirt, and his dark brown eyes are smizing at the camera" width="100%">
   </div>
 </div>
+-->
+
+<div class="row g-5 mb-5">
+  <div class="col-md-6">
+    <img src="{{ site.github.url }}/assets/img/genekim.jpg" alt="A photo of Gene, a Korean-American man smiling against a background with green trees. He has thick straight black hair that is longer on the front and shorter on the sides. He is wearing a blue collared shirt, and his dark brown eyes are smizing at the camera" width="100%">
+  </div>
+  <div class="col-md-6">
+    <h3 class="fw-bold">Welcome</h3>
+    {{ content }}
+  </div>
+</div>
+
 
 {% include publications.html %}
 
