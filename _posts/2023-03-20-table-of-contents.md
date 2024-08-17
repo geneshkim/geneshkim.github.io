@@ -7,7 +7,7 @@ tags: formatting toc
 categories: sample-posts
 giscus_comments: true
 related_posts: false
-toc:
+toc: true
   beginning: true
 ---
 
