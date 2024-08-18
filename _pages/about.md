@@ -9,8 +9,8 @@ profile:
   image: genekim.jpg
   alt: A photo of Gene, a Korean-American man smiling against a background with green trees. He has thick straight black hair that is longer on the front and shorter on the sides. He is wearing a blue collared shirt, and his dark brown eyes are smizing at the camera.
   image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>gene.sh.kim@stanford.edu</p>
+  more_info: ""
+
 
 
 news: true # includes a list of news items
