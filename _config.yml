@@ -2,10 +2,10 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Gene S-H Kim blank # the website title (if blank, full name will be used instead)
-first_name: "" 
-middle_name: ""
-last_name: ""
+title: Gene S-H Kim # the website title (if blank, full name will be used instead)
+first_name: Gene
+middle_name: S-H
+last_name: Kim
 email: gene.sh.kim@stanford.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
