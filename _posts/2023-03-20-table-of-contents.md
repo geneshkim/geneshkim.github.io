@@ -8,7 +8,7 @@ categories: sample-posts
 giscus_comments: true
 related_posts: false
 toc: true
-  beginning: true
+beginning: true
 ---
 
 This post shows how to add a table of contents in the beginning of the post.
