@@ -1,4 +1,5 @@
 ---
+title: "2019 Enchanted Hills Music Camp"
 layout: post
 date: 2019-8-11 23:15:00-0000
 inline: false
