@@ -1,6 +1,6 @@
 ---
 layout: cv
-permalink: /assets/pdf/geneshkim-cv-dec24.pdf
+permalink: /assets/pdf/Gene_Kim_CV1125.pdf
 title: cv
 nav: true
 nav_order: 5
