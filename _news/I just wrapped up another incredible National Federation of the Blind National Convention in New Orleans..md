@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I gave a handful of presentations at the National Federation of the Blind National Convention in New Orleans, including [a panel](https://www.youtube.com/live/dySacOErJjs?si=H6_ZcuIcAa44QzFY&t=8172) on how to involve non-student youth in disability advocacy organizations like the NFB.
+I gave a handful of presentations at the National Federation of the Blind National Convention in New Orleans, including [this panel](https://www.youtube.com/live/dySacOErJjs?si=H6_ZcuIcAa44QzFY&t=8172) on how to involve non-student youth in disability advocacy organizations like the NFB.
