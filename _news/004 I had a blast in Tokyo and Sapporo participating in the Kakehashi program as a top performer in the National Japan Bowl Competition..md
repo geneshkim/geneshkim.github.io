@@ -1,8 +1,8 @@
 ---
 layout: post
 date: 2019-7-24 23:15:00-0000
-inline: true
+inline: false
 related_posts: false
 ---
 
-I had a blast in Tokyo and Sapporo participating in the Kakehashi program as a top performer in the National Japan Bowl Competition.
+Each year, about the top 10 teams (~30 people) that finish at the Level 4 competition at the National Japan Bowl earn a week-long cultural immersion trip to Japan. I had the opportunity to participate in a homestay program, tour a high school, take part in a traditional tea ceremony, meditate at a temple, go shopping in Harajuku, and even meet former First Lady Akie Abe and Princess Takamado. I’ve formed a lot of deep friendships too that I hope will last many years. I’m not particularly beautiful in these photos, but you can see some photos from the trip on Facebook or on Instagram
