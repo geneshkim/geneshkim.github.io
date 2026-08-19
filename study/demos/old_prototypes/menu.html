@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accessible Menu Prototype</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#menu">Skip to menu</a>
+  <header>
+    <p><a href="index.html">Prototype directory</a></p>
+    <h1>Accessible Menu Prototype</h1>
+    <p>This page explores a screen-reader-friendly restaurant menu with semantic sections, filter buttons, cart actions, and optional speech variants for item status.</p>
+  </header>
+  <main id="menu">
+    <section class="page-note" aria-labelledby="desc-title">
+      <h2 id="desc-title">What This Prototype Explores</h2>
+      <p>Default controls use plain names. The speech sample beside each item shows a possible expressive version, such as syllable stretching or Eloquence-style speed and volume hints, that could be used in an opt-in live announcement.</p>
+    </section>
+
+    <section class="panel" aria-labelledby="settings-title">
+      <h2 id="settings-title">Menu Controls</h2>
+      <div class="controls" role="group" aria-label="Filter menu items">
+        <button type="button" aria-pressed="true" data-filter="all">All</button>
+        <button type="button" aria-pressed="false" data-filter="breakfast">Breakfast</button>
+        <button type="button" aria-pressed="false" data-filter="lunch">Lunch</button>
+        <button type="button" aria-pressed="false" data-filter="drinks">Drinks</button>
+      </div>
+      <label for="speech-mode">Announcement style</label>
+      <select id="speech-mode">
+        <option value="plain">Plain announcements</option>
+        <option value="stretched">Syllable-stretched highlights</option>
+        <option value="eci">Eloquence ECI-style hints</option>
+      </select>
+      <div class="live-region" role="status" aria-live="polite" id="menu-status">Showing all menu items.</div>
+    </section>
+
+    <section aria-labelledby="items-title">
+      <h2 id="items-title">Today's Dummy Menu</h2>
+      <ul class="grid list-clean" id="menu-items">
+        <li class="product" data-category="breakfast">
+          <h3>Cloud Pancakes with Emergency Maple</h3>
+          <p class="muted">Three fluffy pancakes, citrus butter, and syrup in a tiny dramatic pitcher.</p>
+          <p><span class="badge ok">Fresh batch</span> <span class="badge">Vegetarian</span></p>
+          <p class="price">$9.40</p>
+          <p class="speech-sample">Variant: f'r'r'r'r'r'r'e'e'e'e'e'e's's's's's's'h batch, Cloud Pancakes ready now.</p>
+          <button type="button" data-name="Cloud Pancakes with Emergency Maple" data-stretched="f'r'r'r'r'r'r'e'e'e'e'e'e's's's's's's'h batch. Cloud Pancakes added." data-eci="‵vs55 ‵vb65 Fresh batch. Cloud Pancakes added.">Add to order</button>
+        </li>
+        <li class="product" data-category="breakfast">
+          <h3>Overconfident Oatmeal</h3>
+          <p class="muted">Steel-cut oats with roasted apples, pecans, and a suspiciously confident cinnamon swirl.</p>
+          <p><span class="badge warn">Only 3 left</span></p>
+          <p class="price">$6.80</p>
+          <p class="speech-sample">Variant: o'o'o'o'o'o'o'n'l'l'l'l'l'l'y three bowls left.</p>
+          <button type="button" data-name="Overconfident Oatmeal" data-stretched="O'o'o'o'o'o'o'n'l'l'l'l'l'l'y three Overconfident Oatmeal bowls left. Added." data-eci="‵vs45 ‵vb70 Only three Overconfident Oatmeal bowls left. Added.">Add to order</button>
+        </li>
+        <li class="product" data-category="lunch">
+          <h3>Spreadsheet Sandwich</h3>
+          <p class="muted">Turkey, sharp cheddar, crunchy greens, and exactly one sensible pickle.</p>
+          <p><span class="badge">Popular lunch</span></p>
+          <p class="price">$11.25</p>
+          <p class="speech-sample">Variant: ‵vs60 popular lunch, Spreadsheet Sandwich.</p>
+          <button type="button" data-name="Spreadsheet Sandwich" data-stretched="Spreadsheet Sandwich added. C'r'r'r'r'r'r'u'u'u'u'u'n'n'n'n'c'h'h'h'h'y pickle included." data-eci="‵vs60 Popular lunch. Spreadsheet Sandwich added.">Add to order</button>
+        </li>
+        <li class="product" data-category="lunch">
+          <h3>Three-Alarm Tofu Tacos</h3>
+          <p class="muted">Smoky tofu, lime slaw, and salsa with a clear spice warning.</p>
+          <p><span class="badge warn">Spicy</span> <span class="badge ok">Vegan</span></p>
+          <p class="price">$10.50</p>
+          <p class="speech-sample">Variant: s's's's'p'i'i'i'i'c'c'c'c'y, three alarm tofu tacos.</p>
+          <button type="button" data-name="Three-Alarm Tofu Tacos" data-stretched="S's's's'p'i'i'i'i'c'c'c'c'y Three-Alarm Tofu Tacos added." data-eci="‵vb75 ‵vs52 Spicy. Three-Alarm Tofu Tacos added.">Add to order</button>
+        </li>
+        <li class="product" data-category="drinks">
+          <h3>Library Whisper Latte</h3>
+          <p class="muted">Espresso, oat milk, and vanilla. Served quietly but not secretly.</p>
+          <p><span class="badge ok">Low sugar option</span></p>
+          <p class="price">$5.75</p>
+          <p class="speech-sample">Variant: ‵vb40 quiet latte added.</p>
+          <button type="button" data-name="Library Whisper Latte" data-stretched="Library Whisper Latte added, q'u'u'u'u'i'i'i'i'e'e'e'e't roast." data-eci="‵vb40 ‵vs42 Quiet latte added.">Add to order</button>
+        </li>
+        <li class="product" data-category="drinks">
+          <h3>Comically Serious Seltzer</h3>
+          <p class="muted">Black cherry seltzer with lime and a tiny paper umbrella taking itself seriously.</p>
+          <p><span class="badge">Caffeine free</span></p>
+          <p class="price">$4.10</p>
+          <p class="speech-sample">Variant: c'r'r'r'r'i'i'i'i's's's's'p seltzer added.</p>
+          <button type="button" data-name="Comically Serious Seltzer" data-stretched="C'r'r'r'r'i'i'i'i's's's's'p Comically Serious Seltzer added." data-eci="‵vs58 ‵vb55 Crisp seltzer added.">Add to order</button>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <script>
+    const filterButtons = document.querySelectorAll('[data-filter]');
+    const items = document.querySelectorAll('#menu-items > li');
+    const status = document.querySelector('#menu-status');
+    const speechMode = document.querySelector('#speech-mode');
+
+    filterButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const filter = button.dataset.filter;
+        filterButtons.forEach((item) => item.setAttribute('aria-pressed', String(item === button)));
+        let count = 0;
+        items.forEach((item) => {
+          const show = filter === 'all' || item.dataset.category === filter;
+          item.hidden = !show;
+          if (show) count += 1;
+        });
+        status.textContent = `Showing ${count} ${filter === 'all' ? 'menu' : filter} items.`;
+      });
+    });
+
+    document.querySelectorAll('#menu-items button').forEach((button) => {
+      button.addEventListener('click', () => {
+        const mode = speechMode.value;
+        const message = mode === 'plain'
+          ? `${button.dataset.name} added to order.`
+          : button.dataset[mode];
+        status.textContent = message;
+      });
+    });
+  </script>
+</body>
+</html>

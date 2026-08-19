@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accessible Checkout Comparison Prototype</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="speech.js" defer></script>
+  <script src="checkout-compare.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to comparison table</a>
+  <header>
+    <div class="topbar">
+      <h1>Comparison Checkout</h1>
+      <nav aria-label="Prototype navigation">
+        <ul class="back-list">
+          <li><a href="index.html">All prototypes</a></li>
+          <li><a href="checkout-store.html">Linear checkout</a></li>
+        </ul>
+      </nav>
+    </div>
+    <section class="prototype-note" aria-labelledby="description">
+      <h2 id="description">What This Prototype Explores</h2>
+      <p>A denser checkout variation for users who prefer comparing all products in a table. It uses row headers, quantity buttons with specific labels, shipping controls, and a live text summary.</p>
+    </section>
+  </header>
+  <main id="main">
+    <section class="toolbar" aria-labelledby="speech-settings">
+      <h2 id="speech-settings" class="sr-only">Speech settings</h2>
+      <label><input type="checkbox" id="enhancedSpeech"> Expressive screen reader labels</label>
+      <label><input type="checkbox" id="eciSpeech" disabled> Include Eloquence ECI examples</label>
+    </section>
+    <p class="sr-only" aria-live="polite" data-live-region></p>
+
+    <section class="panel" aria-labelledby="compare-title">
+      <h2 id="compare-title">Products</h2>
+      <table>
+        <caption id="tableCaption">Dummy cart products with prices, quantities, and delivery notes.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Product</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Delivery note</th>
+          </tr>
+        </thead>
+        <tbody id="compareRows"></tbody>
+      </table>
+    </section>
+
+    <section class="grid two" aria-label="Checkout options and summary">
+      <div class="panel">
+        <h2>Shipping Preference</h2>
+        <label for="deliverySelect">Delivery speed</label>
+        <select id="deliverySelect">
+          <option value="slow">Budget delivery, free</option>
+          <option value="steady">Reliable two day delivery, $5.99</option>
+          <option value="fast">Today before the snacks disappear, $14.99</option>
+        </select>
+      </div>
+      <aside class="panel" aria-labelledby="summary-title">
+        <h2 id="summary-title">Readable Summary</h2>
+        <p id="compareSummary">No summary yet.</p>
+        <button id="confirmCompare" class="warning" data-label-plain="Confirm dummy checkout from comparison view" data-label-expressive="C'o'o'o'o'o'on'f'i'i'i'i'i'irm d'u'u'u'u'u'ummy check'o'o'o'o'o'out from c'o'o'o'o'o'omp'a'a'a'a'ar'i'i'i'i'is'o'o'o'o'on view" data-label-eci="‵vb76 ‵vs82 C'o'o'o'o'o'on'f'i'i'i'i'i'irm d'u'u'u'u'u'ummy check'o'o'o'o'o'out from c'o'o'o'o'o'omp'a'a'a'a'ar'i'i'i'i'is'o'o'o'o'on view">Confirm checkout</button>
+      </aside>
+    </section>
+  </main>
+</body>
+</html>

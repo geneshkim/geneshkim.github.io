@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>prototype 3</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body data-prototype="paper">
+    <div class="app-shell">
+      <header class="topbar" aria-label="Document header">
+        <div class="doc-meta">
+          <div class="doc-icon" aria-hidden="true"></div>
+          <div>
+            <h1>Paper Pencil Docs</h1>
+            <nav class="menu-row" aria-label="Document menu">
+              <span>File</span>
+              <span>Edit</span>
+              <span>View</span>
+              <span>Insert</span>
+              <span>Format</span>
+              <span>Tools</span>
+            </nav>
+          </div>
+        </div>
+        <div class="presence" aria-label="Collaborators in document">
+          <div class="presence-chip octopus" data-presence="octopus">Anonymous Octopus</div>
+          <div class="presence-chip cardinal is-waiting" data-presence="cardinal">Anonymous Cardinal</div>
+          <div class="presence-chip beaver is-waiting" data-presence="beaver">Anonymous Beaver</div>
+          <div class="presence-chip fox is-waiting" data-presence="fox">Anonymous Fox</div>
+          <div class="presence-chip frog is-waiting" data-presence="frog">Anonymous Frog</div>
+          <div class="presence-chip rabbit is-waiting" data-presence="rabbit">Anonymous Rabbit</div>
+          <div class="presence-chip turtle is-waiting" data-presence="turtle">Anonymous Turtle</div>
+          <div class="presence-chip moth is-waiting" data-presence="moth">Anonymous Moth</div>
+          <div class="presence-chip whale is-waiting" data-presence="whale">Anonymous Whale</div>
+        </div>
+      </header>
+
+      <div class="toolbar" aria-label="Document toolbar">
+        <button type="button">100%</button>
+        <button type="button">Normal text</button>
+        <button type="button">Arial</button>
+        <button type="button">11</button>
+        <span class="tool-divider"></span>
+        <button type="button"><strong>B</strong></button>
+        <button type="button"><em>I</em></button>
+        <button type="button"><u>U</u></button>
+        <span class="tool-divider"></span>
+        <button type="button">Comment</button>
+        <span class="tool-divider"></span>
+        <button
+          id="parkingLotToggle"
+          class="parking-toggle"
+          type="button"
+          aria-pressed="false"
+          aria-controls="parkingLot"
+          aria-keyshortcuts="Control+Alt+P"
+        >
+          Cursor parking lot
+        </button>
+        <button id="replayCursors" type="button" aria-keyshortcuts="Control+Alt+C">Replay marks</button>
+        <button id="overviewButton" type="button" aria-keyshortcuts="Control+Alt+V">Skim</button>
+        <button id="activeListButton" type="button" aria-keyshortcuts="Control+Alt+A">Marks</button>
+        <button id="jumpButton" type="button" aria-keyshortcuts="Control+Alt+K">Turn to</button>
+        <button id="followButton" type="button" aria-pressed="false" aria-keyshortcuts="Control+Alt+F">Trace</button>
+        <button id="helpButton" type="button" aria-keyshortcuts="Control+Alt+H">Keyboard shortcuts</button>
+        <details class="settings-menu" id="settingsMenu">
+          <summary aria-keyshortcuts="Control+Alt+M">Customize</summary>
+          <div class="settings-panel" aria-label="Customization settings">
+            <label><input id="speechToggle" type="checkbox" checked> Speech</label>
+            <label><input id="earconToggle" type="checkbox" checked> Earcons</label>
+            <label><input id="panningToggle" type="checkbox" checked> Spatial panning</label>
+            <label><input id="activityToggle" type="checkbox" checked> Activity log</label>
+            <label>
+              Density
+              <select id="densitySelect">
+                <option value="3" selected>3 marks</option>
+                <option value="6">6 marks</option>
+                <option value="9">9 marks</option>
+              </select>
+            </label>
+          </div>
+        </details>
+      </div>
+
+      <main class="workspace">
+        <section class="page-wrap" aria-label="Document workspace">
+          <div
+            id="editor"
+            class="document-page"
+            role="textbox"
+            aria-label="Meeting notes document"
+            aria-multiline="true"
+            aria-keyshortcuts="Control+Alt+C"
+            contenteditable="true"
+            spellcheck="true"
+          >
+            <h2>Weekly Product Sync</h2>
+
+            <h3>Launch Timeline</h3>
+            <p data-para="timeline">
+              <span data-line="timeline-a">The autumn truffle collection remains on track for the first week of September.</span>
+              <span data-line="timeline-b">A teammate is reviewing the tasting notes and final box inserts.</span>
+            </p>
+
+            <h3>Customer Feedback</h3>
+            <p data-para="feedback">
+              <span data-line="feedback-a">Recent shop visits point to stronger interest in smaller gift assortments.</span>
+              <span data-line="feedback-b">The team agreed to keep the flavor cards clear, warm, and easy to scan.</span>
+            </p>
+
+            <h3>Design Decisions</h3>
+            <p data-para="design">
+              <span data-line="design-a">The sleeve will use a quiet cream stock with a narrow cocoa-brown edge.</span>
+              <span data-line="design-b">A designer is comparing ribbon samples against the seasonal palette.</span>
+            </p>
+
+            <h3>Open Questions</h3>
+            <p data-para="questions">
+              <span data-line="questions-a">We still need a final answer on whether the hazelnut praline stays in the launch set.</span>
+              <span data-line="questions-b">A coordinator is checking whether the wholesale sample tins can arrive sooner.</span>
+            </p>
+
+            <h3>Risks</h3>
+            <p data-para="risks">
+              <span data-line="risks-a">The highest risk is a late shipment of the molded trays for the twelve-piece box.</span>
+              <span data-line="risks-b">Short storage windows should help, but only if the kitchen schedule stays steady.</span>
+            </p>
+
+            <h3>Action Items</h3>
+            <p data-para="actions">
+              <span data-line="actions-a">Prepare a short tasting flight for next week's retailer preview.</span>
+              <span data-line="actions-b">Collect reactions to the cherry ganache, sea salt caramel, and dark mint pieces.</span>
+            </p>
+
+            <p
+              id="parkingLot"
+              class="parking-lot"
+              data-para="parking"
+              data-line="parking-line"
+              hidden
+            >
+              <span data-parking-slot="octopus"> </span><span data-parking-slot="cardinal"> </span><span data-parking-slot="beaver"> </span><span data-parking-slot="fox"> </span><span data-parking-slot="frog"> </span><span data-parking-slot="rabbit"> </span><span data-parking-slot="turtle"> </span><span data-parking-slot="moth"> </span><span data-parking-slot="whale"> </span>
+            </p>
+          </div>
+          <div id="cursorLayer" class="cursor-layer" aria-hidden="true"></div>
+        </section>
+
+        <aside class="activity-panel" aria-label="Activity log">
+          <h2>Margin</h2>
+          <div id="modeStatus" class="mode-status">Pencil, paper, margin, and sticky-note cues. Ctrl+Alt+C replays visible marks.</div>
+          <ol id="activityLog" class="activity-log"></ol>
+        </aside>
+      </main>
+    </div>
+
+    <div id="liveRegion" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+    <dialog id="helpDialog" class="help-dialog" aria-labelledby="helpDialogTitle">
+      <div class="dialog-header">
+        <h1 id="helpDialogTitle">Keyboard shortcuts</h1>
+        <button id="helpCloseButton" type="button">Close</button>
+      </div>
+      <div class="shortcut-help paper-help">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Feature name</th>
+              <th scope="col">Description</th>
+              <th scope="col">Keyboard shortcut</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cursor parking lot</td>
+              <td>Moves collaborator cursors to the bottom line so you can arrow through their positions.</td>
+              <td>Control+Alt+P</td>
+            </tr>
+            <tr>
+              <td>Replay cursors</td>
+              <td>Plays the visible collaborator cursor sounds in document order.</td>
+              <td>Control+Alt+C</td>
+            </tr>
+            <tr>
+              <td>Overview</td>
+              <td>Reads a section-by-section summary of cursors, comments, and suggested edits.</td>
+              <td>Control+Alt+V</td>
+            </tr>
+            <tr>
+              <td>Active</td>
+              <td>Lists the collaborators currently visible in the document.</td>
+              <td>Control+Alt+A</td>
+            </tr>
+            <tr>
+              <td>Jump</td>
+              <td>Moves the editing cursor to the next collaborator location.</td>
+              <td>Control+Alt+K</td>
+            </tr>
+            <tr>
+              <td>Follow</td>
+              <td>Toggles periodic updates for the first active collaborator.</td>
+              <td>Control+Alt+F</td>
+            </tr>
+            <tr>
+              <td>Customize</td>
+              <td>Opens the settings menu for speech, earcons, panning, activity, and density.</td>
+              <td>Control+Alt+M</td>
+            </tr>
+            <tr>
+              <td>Keyboard shortcuts</td>
+              <td>Opens this keyboard shortcuts help dialog.</td>
+              <td>Control+Alt+H</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>

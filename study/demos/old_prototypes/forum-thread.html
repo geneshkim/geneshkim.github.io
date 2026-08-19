@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accessible Reddit-Style Forum Prototype</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="speech.js" defer></script>
+  <script src="forum-thread.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to forum posts</a>
+  <header>
+    <div class="topbar">
+      <h1>Threadit Forum</h1>
+      <nav aria-label="Prototype navigation">
+        <ul class="back-list">
+          <li><a href="index.html">All prototypes</a></li>
+          <li><a href="forum-compose.html">Compose variation</a></li>
+        </ul>
+      </nav>
+    </div>
+    <section class="prototype-note" aria-labelledby="description">
+      <h2 id="description">What This Prototype Explores</h2>
+      <p>A Reddit-style feed and discussion thread with accessible voting controls, sortable comments, nested replies, and optional expressive labels for post tone and status.</p>
+    </section>
+  </header>
+  <main id="main">
+    <section class="toolbar" aria-labelledby="speech-settings">
+      <h2 id="speech-settings" class="sr-only">Speech settings</h2>
+      <label><input type="checkbox" id="enhancedSpeech"> Expressive screen reader labels</label>
+      <label><input type="checkbox" id="eciSpeech" disabled> Include Eloquence ECI examples</label>
+      <label for="sortComments">Sort comments</label>
+      <select id="sortComments">
+        <option value="top">Top</option>
+        <option value="new">New</option>
+        <option value="old">Old</option>
+      </select>
+    </section>
+    <p class="sr-only" aria-live="polite" data-live-region></p>
+
+    <div class="grid two">
+      <section class="stack" aria-labelledby="feed-title">
+        <h2 id="feed-title">Posts</h2>
+        <article class="card">
+          <div class="vote-row">
+            <button class="secondary" data-vote="post-a" data-dir="up" data-label-plain="Upvote post about microwave etiquette" data-label-expressive="Upvote post about m'i'i'i'i'i'icr'o'o'o'o'o'wave et'i'i'i'i'iqu'e'e'e'e'ette" data-label-eci="‵vb70 ‵vs86 Upvote post about m'i'i'i'i'i'icr'o'o'o'o'o'wave et'i'i'i'i'iqu'e'e'e'e'ette">Up</button>
+            <strong id="score-post-a">128</strong>
+            <button class="secondary" data-vote="post-a" data-dir="down" data-label-plain="Downvote post about microwave etiquette" data-label-expressive="Downvote post about m'i'i'i'i'i'icr'o'o'o'o'o'wave et'i'i'i'i'iqu'e'e'e'e'ette" data-label-eci="‵vb60 ‵vs86 Downvote post about m'i'i'i'i'i'icr'o'o'o'o'o'wave et'i'i'i'i'iqu'e'e'e'e'ette">Down</button>
+            <div>
+              <h3>Is reheating fish in the office microwave a software bug?</h3>
+              <p class="muted">r/workplacephilosophy by u/quiet_keyboard</p>
+            </div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="vote-row">
+            <button class="secondary" data-vote="post-b" data-dir="up" data-label-plain="Upvote post about sock sorting algorithms" data-label-expressive="Upvote post about sock s'o'o'o'o'o'ort'i'i'i'i'ing alg'o'o'o'o'orithm'm'm'm'm'm's" data-label-eci="‵vb74 ‵vs88 Upvote post about sock s'o'o'o'o'o'ort'i'i'i'i'ing alg'o'o'o'o'orithm'm'm'm'm'm's">Up</button>
+            <strong id="score-post-b">84</strong>
+            <button class="secondary" data-vote="post-b" data-dir="down" data-label-plain="Downvote post about sock sorting algorithms" data-label-expressive="Downvote post about sock s'o'o'o'o'o'ort'i'i'i'i'ing alg'o'o'o'o'orithm'm'm'm'm'm's" data-label-eci="‵vb58 ‵vs88 Downvote post about sock s'o'o'o'o'o'ort'i'i'i'i'ing alg'o'o'o'o'orithm'm'm'm'm'm's">Down</button>
+            <div>
+              <h3>I ranked my laundry by merge sort and now I respect socks less.</h3>
+              <p class="muted">r/householdops by u/heap_sneaker</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="panel" aria-labelledby="thread-title">
+        <h2 id="thread-title">Selected Thread</h2>
+        <article>
+          <h3>Is reheating fish in the office microwave a software bug?</h3>
+          <p>I propose a ticket severity of medium-high because the repro steps are easy and the impact radius is the entire floor.</p>
+          <p><span class="pill">Discussion</span> <span class="pill">Office Etiquette</span></p>
+        </article>
+        <section aria-labelledby="comments-title">
+          <h3 id="comments-title">Comments</h3>
+          <div id="comments" class="stack"></div>
+        </section>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

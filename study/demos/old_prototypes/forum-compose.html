@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accessible Forum Compose Prototype</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="speech.js" defer></script>
+  <script src="forum-compose.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to compose form</a>
+  <header>
+    <div class="topbar">
+      <h1>Threadit Composer</h1>
+      <nav aria-label="Prototype navigation">
+        <ul class="back-list">
+          <li><a href="index.html">All prototypes</a></li>
+          <li><a href="forum-thread.html">Thread variation</a></li>
+        </ul>
+      </nav>
+    </div>
+    <section class="prototype-note" aria-labelledby="description">
+      <h2 id="description">What This Prototype Explores</h2>
+      <p>A forum post composer with accessible labels, validation messages, flair selection, content warning controls, a live preview, and optional expressive submit/status labels.</p>
+    </section>
+  </header>
+  <main id="main">
+    <section class="toolbar" aria-labelledby="speech-settings">
+      <h2 id="speech-settings" class="sr-only">Speech settings</h2>
+      <label><input type="checkbox" id="enhancedSpeech"> Expressive screen reader labels</label>
+      <label><input type="checkbox" id="eciSpeech" disabled> Include Eloquence ECI examples</label>
+    </section>
+    <p class="sr-only" aria-live="polite" data-live-region></p>
+
+    <div class="grid two">
+      <form class="panel stack" id="postForm" novalidate aria-labelledby="form-title">
+        <h2 id="form-title">Create Post</h2>
+        <div class="field">
+          <label for="community">Community</label>
+          <select id="community" name="community">
+            <option>r/lowstakesmysteries</option>
+            <option>r/overpreparedlunches</option>
+            <option>r/keyboardgardening</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="title">Title</label>
+          <input id="title" name="title" maxlength="90" aria-describedby="titleHelp titleError">
+          <p id="titleHelp" class="muted">Minimum 8 characters.</p>
+          <p id="titleError" class="error" hidden></p>
+        </div>
+        <div class="field">
+          <label for="body">Body</label>
+          <textarea id="body" name="body" aria-describedby="bodyHelp bodyError"></textarea>
+          <p id="bodyHelp" class="muted">Minimum 20 characters. Markdown is not rendered in this prototype.</p>
+          <p id="bodyError" class="error" hidden></p>
+        </div>
+        <fieldset class="stack">
+          <legend>Flair</legend>
+          <label><input type="radio" name="flair" value="Question" checked> Question</label>
+          <label><input type="radio" name="flair" value="Update"> Update</label>
+          <label><input type="radio" name="flair" value="Solved"> Solved</label>
+        </fieldset>
+        <label><input type="checkbox" id="contentWarning"> Add content warning for intense lunch opinions</label>
+        <button id="submitPost" type="submit" class="warning" data-label-plain="Submit dummy forum post" data-label-expressive="S'u'u'u'u'u'ubm'i'i'i'i'it d'u'u'u'u'u'ummy f'o'o'o'o'o'orum post" data-label-eci="‵vb78 ‵vs84 S'u'u'u'u'u'ubm'i'i'i'i'it d'u'u'u'u'u'ummy f'o'o'o'o'o'orum post">Submit post</button>
+      </form>
+
+      <aside class="panel" aria-labelledby="preview-title">
+        <h2 id="preview-title">Preview</h2>
+        <article class="card">
+          <p class="muted" id="previewMeta">r/lowstakesmysteries · Question</p>
+          <h3 id="previewTitle">Untitled draft</h3>
+          <p id="warningPreview" class="pill" hidden>Content warning: intense lunch opinions</p>
+          <p id="previewBody">Start typing to preview the post body.</p>
+        </article>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>
