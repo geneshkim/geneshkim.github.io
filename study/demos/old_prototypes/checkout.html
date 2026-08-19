@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accessible Fake Marketplace Checkout</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to checkout</a>
+  <header>
+    <p><a href="index.html">Prototype directory</a></p>
+    <h1>Accessible Fake Marketplace Checkout</h1>
+    <p>This page explores product buying, cart updates, delivery choices, and form labeling in a small dummy marketplace flow.</p>
+  </header>
+  <main id="main">
+    <section class="page-note" aria-labelledby="desc-title">
+      <h2 id="desc-title">What This Prototype Explores</h2>
+      <p>The checkout keeps a plain status region for cart changes and order placement. Optional expressive announcements demonstrate how important state changes could be made more distinguishable for users who intentionally choose an Eloquence-like voice mode.</p>
+    </section>
+
+    <section class="panel" aria-labelledby="settings-title">
+      <h2 id="settings-title">Checkout Settings</h2>
+      <label for="voice-mode">Cart announcement style</label>
+      <select id="voice-mode">
+        <option value="plain">Plain announcements</option>
+        <option value="stretched">Syllable-stretched emphasis</option>
+        <option value="eci">Eloquence ECI-style emphasis</option>
+      </select>
+      <div class="live-region" id="cart-status" role="status" aria-live="polite">Cart is empty.</div>
+    </section>
+
+    <div class="two-col">
+      <section aria-labelledby="products-title">
+        <h2 id="products-title">Products</h2>
+        <ul class="grid list-clean">
+          <li class="product">
+            <h3>Desk Vacuum for Crumb Emergencies</h3>
+            <p class="muted">Tiny USB vacuum for keyboards, snack zones, and suspicious desk glitter.</p>
+            <p><span class="badge ok">Ships today</span> <span class="badge">4.6 stars</span></p>
+            <p class="price">$18.99</p>
+            <button type="button" data-product="Desk Vacuum for Crumb Emergencies" data-price="18.99" data-stretched="Desk Vacuum added. C'r'r'r'r'r'u'u'u'u'm'm'm'm'b emergency handled." data-eci="‵vs58 ‵vb68 Desk Vacuum added. Crumb emergency handled.">Add to cart</button>
+          </li>
+          <li class="product">
+            <h3>Banana-Safe Backpack Divider</h3>
+            <p class="muted">A washable divider that keeps laptops away from ambitious fruit.</p>
+            <p><span class="badge warn">Low stock</span> <span class="badge">4.2 stars</span></p>
+            <p class="price">$14.50</p>
+            <button type="button" data-product="Banana-Safe Backpack Divider" data-price="14.50" data-stretched="B'a'a'a'a'a'n'a'a'a'a'a'n'a'a'a'a'a safe divider added. Low stock." data-eci="‵vs48 ‵vb72 Low stock. Banana-Safe Backpack Divider added.">Add to cart</button>
+          </li>
+          <li class="product">
+            <h3>Mug That Says Meeting Fuel</h3>
+            <p class="muted">Holds coffee, tea, or the quiet hope that the agenda has only three items.</p>
+            <p><span class="badge">Dishwasher safe</span> <span class="badge">4.8 stars</span></p>
+            <p class="price">$12.25</p>
+            <button type="button" data-product="Mug That Says Meeting Fuel" data-price="12.25" data-stretched="Meeting Fuel mug added. H'o'o'o'o'o't beverage ready." data-eci="‵vs55 ‵vb60 Meeting Fuel mug added. Hot beverage ready.">Add to cart</button>
+          </li>
+          <li class="product">
+            <h3>Emergency Backup Notebook</h3>
+            <p class="muted">Pocket notebook for ideas that arrive when every app is updating.</p>
+            <p><span class="badge ok">Recycled paper</span> <span class="badge">4.7 stars</span></p>
+            <p class="price">$7.80</p>
+            <button type="button" data-product="Emergency Backup Notebook" data-price="7.80" data-stretched="Emergency Backup Notebook added. R'e'e'e'e'e'a'a'a'a'd'y for ideas." data-eci="‵vs62 ‵vb58 Emergency Backup Notebook added. Ready for ideas.">Add to cart</button>
+          </li>
+        </ul>
+      </section>
+
+      <aside class="panel" aria-labelledby="cart-title">
+        <h2 id="cart-title">Cart Summary</h2>
+        <ul class="list-clean" id="cart-list" aria-label="Cart items"></ul>
+        <p class="cart-line"><span>Subtotal</span><strong id="subtotal">$0.00</strong></p>
+        <p class="cart-line"><span>Estimated shipping</span><strong id="shipping">$0.00</strong></p>
+        <p class="cart-line"><span>Total</span><strong id="total">$0.00</strong></p>
+      </aside>
+    </div>
+
+    <section class="panel" aria-labelledby="checkout-title">
+      <h2 id="checkout-title">Checkout</h2>
+      <form id="checkout-form">
+        <fieldset>
+          <legend>Delivery speed</legend>
+          <label><input type="radio" name="delivery" value="0" checked> Standard delivery, free</label>
+          <label><input type="radio" name="delivery" value="4.99"> Tiny rocket delivery, $4.99</label>
+          <label><input type="radio" name="delivery" value="9.99"> Suspiciously fast delivery, $9.99</label>
+        </fieldset>
+
+        <div class="grid">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" autocomplete="name" required value="Sam Example">
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" type="email" autocomplete="email" required value="sam@example.com">
+          </div>
+          <div>
+            <label for="address">Shipping address</label>
+            <input id="address" autocomplete="street-address" required value="101 Demo Lane">
+          </div>
+          <div>
+            <label for="card">Card number</label>
+            <input id="card" inputmode="numeric" aria-describedby="card-help" required value="4242 4242 4242 4242">
+            <p class="muted" id="card-help">Dummy input only. Do not enter a real card number.</p>
+          </div>
+        </div>
+        <button type="submit">Place fake order</button>
+      </form>
+    </section>
+  </main>
+  <script>
+    const cart = new Map();
+    const status = document.querySelector('#cart-status');
+    const cartList = document.querySelector('#cart-list');
+    const subtotalEl = document.querySelector('#subtotal');
+    const shippingEl = document.querySelector('#shipping');
+    const totalEl = document.querySelector('#total');
+    const voiceMode = document.querySelector('#voice-mode');
+
+    function money(value) {
+      return `$${value.toFixed(2)}`;
+    }
+
+    function announce(button) {
+      const mode = voiceMode.value;
+      if (mode === 'plain') return `${button.dataset.product} added to cart.`;
+      return button.dataset[mode];
+    }
+
+    function renderCart() {
+      cartList.innerHTML = '';
+      let subtotal = 0;
+      cart.forEach((item, name) => {
+        subtotal += item.price * item.quantity;
+        const li = document.createElement('li');
+        li.className = 'cart-line';
+        li.innerHTML = `<span>${name} quantity ${item.quantity}</span><strong>${money(item.price * item.quantity)}</strong>`;
+        cartList.append(li);
+      });
+      const shipping = Number(document.querySelector('input[name="delivery"]:checked').value);
+      subtotalEl.textContent = money(subtotal);
+      shippingEl.textContent = money(cart.size ? shipping : 0);
+      totalEl.textContent = money(subtotal + (cart.size ? shipping : 0));
+      if (!cart.size) {
+        const li = document.createElement('li');
+        li.className = 'muted';
+        li.textContent = 'No items yet.';
+        cartList.append(li);
+      }
+    }
+
+    document.querySelectorAll('[data-product]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const name = button.dataset.product;
+        const existing = cart.get(name) || { price: Number(button.dataset.price), quantity: 0 };
+        existing.quantity += 1;
+        cart.set(name, existing);
+        renderCart();
+        status.textContent = announce(button);
+      });
+    });
+
+    document.querySelectorAll('input[name="delivery"]').forEach((radio) => {
+      radio.addEventListener('change', () => {
+        renderCart();
+        status.textContent = `Delivery updated. New total ${totalEl.textContent}.`;
+      });
+    });
+
+    document.querySelector('#checkout-form').addEventListener('submit', (event) => {
+      event.preventDefault();
+      const count = [...cart.values()].reduce((sum, item) => sum + item.quantity, 0);
+      const total = totalEl.textContent;
+      if (!count) {
+        status.textContent = 'Cart is empty. Add at least one item before placing a fake order.';
+        return;
+      }
+      status.textContent = voiceMode.value === 'plain'
+        ? `Fake order placed for ${count} items. Total ${total}.`
+        : voiceMode.value === 'stretched'
+          ? `Fake order p'l'l'l'l'a'a'a'a'c'c'c'c'e'e'e'e'd for ${count} items. Total ${total}.`
+          : `‵vs50 ‵vb75 Fake order placed for ${count} items. Total ${total}.`;
+    });
+
+    renderCart();
+  </script>
+</body>
+</html>

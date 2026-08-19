@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fake Amazon-Style Checkout Prototype</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="speech.js" defer></script>
+  <script src="checkout-store.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to checkout</a>
+  <header>
+    <div class="topbar">
+      <h1>Rainforest Cart Checkout</h1>
+      <nav aria-label="Prototype navigation">
+        <ul class="back-list">
+          <li><a href="index.html">All prototypes</a></li>
+          <li><a href="checkout-compare.html">Compare variation</a></li>
+          <li><a href="menu-order.html">Menu</a></li>
+        </ul>
+      </nav>
+    </div>
+    <section class="prototype-note" aria-labelledby="description">
+      <h2 id="description">What This Prototype Explores</h2>
+      <p>A fake Amazon-style checkout using dummy products, a linear step list, explicit order totals, and polite live announcements. Variation controls compare plain task labels against more expressive total/status announcements.</p>
+    </section>
+  </header>
+  <main id="main">
+    <section class="toolbar" aria-labelledby="speech-settings">
+      <h2 id="speech-settings" class="sr-only">Speech settings</h2>
+      <label><input type="checkbox" id="enhancedSpeech"> Expressive screen reader labels</label>
+      <label><input type="checkbox" id="eciSpeech" disabled> Include Eloquence ECI examples</label>
+    </section>
+    <p class="sr-only" aria-live="polite" data-live-region></p>
+
+    <div class="grid two">
+      <section aria-labelledby="steps-title">
+        <h2 id="steps-title">Checkout Steps</h2>
+        <ol class="step-list">
+          <li>
+            <h3>Shipping address</h3>
+            <p>Casey Example, 42 Side Quest Lane, Portland, OR 97205</p>
+            <button class="secondary" data-label-plain="Change shipping address" data-label-expressive="Change sh'i'i'i'i'i'i'pp'i'i'i'i'i'ing add'r'r'r'r'r'r'e'e'e'e'e'ess" data-label-eci="‵vs88 Change sh'i'i'i'i'i'i'pp'i'i'i'i'i'ing add'r'r'r'r'r'r'e'e'e'e'e'ess">Change</button>
+          </li>
+          <li>
+            <h3>Delivery</h3>
+            <fieldset class="stack">
+              <legend>Choose delivery speed</legend>
+              <label><input type="radio" name="delivery" value="free" checked> Thursday, free</label>
+              <label><input type="radio" name="delivery" value="fast"> Tomorrow, $7.99</label>
+              <label><input type="radio" name="delivery" value="dramatic"> Dramatic entrance by 8 PM, $12.49</label>
+            </fieldset>
+          </li>
+          <li>
+            <h3>Payment</h3>
+            <p>Banana Bank card ending in 1234</p>
+            <button class="secondary" data-label-plain="Change payment method" data-label-expressive="Change p'a'a'a'a'a'ay'ment m'e'e'e'e'e'eth'o'o'o'o'od" data-label-eci="‵vs86 Change p'a'a'a'a'a'ay'ment m'e'e'e'e'e'eth'o'o'o'o'od">Change</button>
+          </li>
+        </ol>
+      </section>
+
+      <aside class="panel" aria-labelledby="summary-title">
+        <h2 id="summary-title">Order Summary</h2>
+        <div id="checkoutProducts" class="stack"></div>
+        <dl>
+          <dt>Items</dt>
+          <dd id="itemsTotal">$0.00</dd>
+          <dt>Delivery</dt>
+          <dd id="deliveryTotal">$0.00</dd>
+          <dt>Estimated tax</dt>
+          <dd id="taxTotal">$0.00</dd>
+          <dt class="total">Order total</dt>
+          <dd class="total" id="orderTotal">$0.00</dd>
+        </dl>
+        <button id="placeOrder" class="warning" data-label-plain="Place dummy order" data-label-expressive="Place d'u'u'u'u'u'ummy o'o'o'o'o'rd'e'e'e'e'er'r'r'r'r'r" data-label-eci="‵vb82 ‵vs80 Place d'u'u'u'u'u'ummy o'o'o'o'o'rd'e'e'e'e'er'r'r'r'r'r">Place order</button>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>

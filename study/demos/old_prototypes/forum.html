@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accessible Reddit-Style Forum Prototype</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to forum feed</a>
+  <header>
+    <p><a href="index.html">Prototype directory</a></p>
+    <h1>Accessible Reddit-Style Forum Prototype</h1>
+    <p>This page explores a forum feed with voting, sorting, comment metadata, and optional expressive screen-reader announcements.</p>
+  </header>
+  <main id="main">
+    <section class="page-note" aria-labelledby="desc-title">
+      <h2 id="desc-title">What This Prototype Explores</h2>
+      <p>Each post is an article with a heading, score, topic, and comment count. Voting buttons expose their action and current score through status messages. Expressive variants are optional so normal reading order and labels stay predictable.</p>
+    </section>
+
+    <section class="panel" aria-labelledby="controls-title">
+      <h2 id="controls-title">Forum Controls</h2>
+      <div class="controls">
+        <div>
+          <label for="sort">Sort posts</label>
+          <select id="sort">
+            <option value="top">Top</option>
+            <option value="new">New</option>
+            <option value="discussed">Most discussed</option>
+          </select>
+        </div>
+        <div>
+          <label for="announce-mode">Announcement style</label>
+          <select id="announce-mode">
+            <option value="plain">Plain announcements</option>
+            <option value="stretched">Syllable-stretched emphasis</option>
+            <option value="eci">Eloquence ECI-style emphasis</option>
+          </select>
+        </div>
+      </div>
+      <div class="live-region" role="status" aria-live="polite" id="forum-status">Loaded top posts.</div>
+    </section>
+
+    <section class="panel" aria-labelledby="compose-title">
+      <h2 id="compose-title">Create Dummy Post</h2>
+      <form id="post-form">
+        <label for="post-title">Post title</label>
+        <input id="post-title" required value="Can a calendar be emotionally prepared for May?">
+        <label for="post-body">Post body</label>
+        <textarea id="post-body" required>I changed all my reminder sounds and now my calendar seems judgmental.</textarea>
+        <button type="submit">Post to forum</button>
+      </form>
+    </section>
+
+    <section aria-labelledby="feed-title">
+      <h2 id="feed-title">Forum Feed</h2>
+      <div id="feed" class="list-clean">
+        <article class="post" data-score="184" data-comments="42" data-age="2">
+          <h3>My smart toaster joined the guest Wi-Fi and now only accepts artisan bread</h3>
+          <p class="muted">Posted in r/householddrama by CrumbAuditor, 2 hours ago</p>
+          <p>It rejected a perfectly normal bagel with one long beep and a confidence I did not appreciate.</p>
+          <p><span class="badge ok">Solved</span> <span class="badge">42 comments</span></p>
+          <div class="vote-row">
+            <button type="button" data-vote="up" aria-label="Upvote smart toaster post">Upvote</button>
+            <strong aria-label="Score 184">184</strong>
+            <button type="button" data-vote="down" aria-label="Downvote smart toaster post">Downvote</button>
+          </div>
+        </article>
+        <article class="post" data-score="96" data-comments="13" data-age="1">
+          <h3>Office plant looks healthier after being assigned a project manager</h3>
+          <p class="muted">Posted in r/botanybutmakeitbusiness by LeafStandup, 1 hour ago</p>
+          <p>Daily check-ins helped, but I think the real breakthrough was moving it away from the printer.</p>
+          <p><span class="badge">Research-ish</span> <span class="badge">13 comments</span></p>
+          <div class="vote-row">
+            <button type="button" data-vote="up" aria-label="Upvote office plant post">Upvote</button>
+            <strong aria-label="Score 96">96</strong>
+            <button type="button" data-vote="down" aria-label="Downvote office plant post">Downvote</button>
+          </div>
+        </article>
+        <article class="post" data-score="211" data-comments="78" data-age="6">
+          <h3>Which soup has the best keyboard shortcut energy?</h3>
+          <p class="muted">Posted in r/tinylunchdebates by BrothControl, 6 hours ago</p>
+          <p>Tomato feels like Control S. Minestrone feels like Alt Tab. I will defend this with charts.</p>
+          <p><span class="badge warn">Hot thread</span> <span class="badge">78 comments</span></p>
+          <div class="vote-row">
+            <button type="button" data-vote="up" aria-label="Upvote soup keyboard shortcut post">Upvote</button>
+            <strong aria-label="Score 211">211</strong>
+            <button type="button" data-vote="down" aria-label="Downvote soup keyboard shortcut post">Downvote</button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+  <script>
+    const mode = document.querySelector('#announce-mode');
+    const status = document.querySelector('#forum-status');
+    const feed = document.querySelector('#feed');
+
+    function expressive(message, kind) {
+      if (mode.value === 'plain') return message;
+      if (mode.value === 'stretched') {
+        return kind === 'up' ? `U'u'u'u'p'v'o'o'o'o't'e'e'e'e recorded. ${message}` : `D'o'o'o'o'own vote recorded. ${message}`;
+      }
+      return kind === 'up'
+        ? `‵vs62 ‵vb65 Upvote recorded. ${message}`
+        : `‵vs48 ‵vb50 Downvote recorded. ${message}`;
+    }
+
+    feed.addEventListener('click', (event) => {
+      const button = event.target.closest('button[data-vote]');
+      if (!button) return;
+      const post = button.closest('.post');
+      const scoreEl = post.querySelector('strong');
+      const delta = button.dataset.vote === 'up' ? 1 : -1;
+      const next = Number(scoreEl.textContent) + delta;
+      scoreEl.textContent = next;
+      scoreEl.setAttribute('aria-label', `Score ${next}`);
+      post.dataset.score = String(next);
+      const title = post.querySelector('h3').textContent;
+      status.textContent = expressive(`${title} now has score ${next}.`, button.dataset.vote);
+    });
+
+    document.querySelector('#sort').addEventListener('change', (event) => {
+      const posts = [...feed.querySelectorAll('.post')];
+      const key = event.target.value;
+      posts.sort((a, b) => {
+        if (key === 'new') return Number(a.dataset.age) - Number(b.dataset.age);
+        if (key === 'discussed') return Number(b.dataset.comments) - Number(a.dataset.comments);
+        return Number(b.dataset.score) - Number(a.dataset.score);
+      });
+      posts.forEach((post) => feed.append(post));
+      status.textContent = `Posts sorted by ${event.target.selectedOptions[0].text}.`;
+    });
+
+    document.querySelector('#post-form').addEventListener('submit', (event) => {
+      event.preventDefault();
+      const title = document.querySelector('#post-title').value.trim();
+      const body = document.querySelector('#post-body').value.trim();
+      const article = document.createElement('article');
+      article.className = 'post';
+      article.dataset.score = '1';
+      article.dataset.comments = '0';
+      article.dataset.age = '0';
+      article.innerHTML = `
+        <h3></h3>
+        <p class="muted">Posted in r/prototype by You, just now</p>
+        <p></p>
+        <p><span class="badge ok">New</span> <span class="badge">0 comments</span></p>
+        <div class="vote-row">
+          <button type="button" data-vote="up" aria-label="Upvote your new post">Upvote</button>
+          <strong aria-label="Score 1">1</strong>
+          <button type="button" data-vote="down" aria-label="Downvote your new post">Downvote</button>
+        </div>
+      `;
+      article.querySelector('h3').textContent = title;
+      article.querySelectorAll('p')[1].textContent = body;
+      feed.prepend(article);
+      status.textContent = mode.value === 'plain'
+        ? `Post created: ${title}.`
+        : mode.value === 'stretched'
+          ? `N'e'e'e'e'w post created: ${title}.`
+          : `‵vs58 ‵vb70 New post created: ${title}.`;
+    });
+  </script>
+</body>
+</html>

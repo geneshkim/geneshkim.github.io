@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accessible Menu Order Prototype</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="speech.js" defer></script>
+  <script src="menu-order.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to menu</a>
+  <header>
+    <div class="topbar">
+      <h1>Accessible Cafe Menu</h1>
+      <nav aria-label="Prototype navigation">
+        <ul class="back-list">
+          <li><a href="index.html">All prototypes</a></li>
+          <li><a href="checkout-store.html">Checkout</a></li>
+          <li><a href="forum-thread.html">Forum</a></li>
+        </ul>
+      </nav>
+    </div>
+    <section class="prototype-note" aria-labelledby="description">
+      <h2 id="description">What This Prototype Explores</h2>
+      <p>A restaurant-style menu that stays usable with headings, category links, clear buttons, item descriptions, and a live cart summary. The speech controls test plain labels, pronounceable syllable labels, and optional Eloquence command examples.</p>
+    </section>
+  </header>
+
+  <main id="main">
+    <section class="toolbar" aria-labelledby="speech-settings">
+      <h2 id="speech-settings" class="sr-only">Speech settings</h2>
+      <label><input type="checkbox" id="enhancedSpeech"> Expressive screen reader labels</label>
+      <label><input type="checkbox" id="eciSpeech" disabled> Include Eloquence ECI examples</label>
+      <p class="muted" id="speech-warning">Use ECI mode only with compatible Eloquence setups.</p>
+    </section>
+    <p class="sr-only" aria-live="polite" data-live-region></p>
+
+    <nav class="tabs" aria-label="Menu categories">
+      <a href="#breakfast">Breakfast</a>
+      <a href="#lunch">Lunch</a>
+      <a href="#drinks">Drinks</a>
+    </nav>
+
+    <div class="grid two">
+      <section class="stack" aria-label="Menu items">
+        <section id="breakfast" class="panel" aria-labelledby="breakfast-title">
+          <h2 id="breakfast-title">Breakfast</h2>
+          <div class="grid two">
+            <article class="card menu-item" data-id="waffle">
+              <h3>Moon Waffle Stack</h3>
+              <p>Blueberry waffles, lemon cream, and crunchy oat dust.</p>
+              <p class="price">$8.50</p>
+              <button data-add="waffle" data-label-plain="Add Moon Waffle Stack to cart" data-label-expressive="Add M'o'o'o'o'o'o'o'o'o'o'o'n W'a'a'a'a'a'a'a'f'f'f'f'f'f'f'f'f'le Stack to cart" data-label-eci="‵vb70 ‵vs85 Add M'o'o'o'o'o'o'o'o'o'o'o'n W'a'a'a'a'a'a'a'f'f'f'f'f'f'f'f'f'le Stack to cart">Add</button>
+            </article>
+            <article class="card menu-item" data-id="toast">
+              <h3>Keyboard Toast Flight</h3>
+              <p>Three tiny toasts: avocado, jam, and mysterious butter.</p>
+              <p class="price">$7.25</p>
+              <button data-add="toast" data-label-plain="Add Keyboard Toast Flight to cart" data-label-expressive="Add K'e'e'e'e'e'e'e'e'e'y'b'o'o'o'o'o'o'o'o'o'ard Toast Flight to cart" data-label-eci="‵vb65 ‵vs90 Add K'e'e'e'e'e'e'e'e'e'y'b'o'o'o'o'o'o'o'o'o'ard Toast Flight to cart">Add</button>
+            </article>
+          </div>
+        </section>
+
+        <section id="lunch" class="panel" aria-labelledby="lunch-title">
+          <h2 id="lunch-title">Lunch</h2>
+          <div class="grid two">
+            <article class="card menu-item" data-id="wrap">
+              <h3>Crispy Weather Wrap</h3>
+              <p>Roasted vegetables, crunchy chickpeas, and forecast aioli.</p>
+              <p class="price">$10.75</p>
+              <button data-add="wrap" data-label-plain="Add Crispy Weather Wrap to cart" data-label-expressive="Add C'r'r'r'r'r'r'r'i'i'i'i'i'i'i'ispy W'e'e'e'e'e'e'e'e'e'ath'e'e'e'e'e'e'er Wrap to cart" data-label-eci="‵vb80 ‵vs82 Add C'r'r'r'r'r'r'r'i'i'i'i'i'i'i'ispy W'e'e'e'e'e'e'e'e'e'ath'e'e'e'e'e'e'er Wrap to cart">Add</button>
+            </article>
+            <article class="card menu-item" data-id="soup">
+              <h3>Inbox Zero Soup</h3>
+              <p>Tomato basil soup with alphabet pasta sorted by urgency.</p>
+              <p class="price">$6.95</p>
+              <button data-add="soup" data-label-plain="Add Inbox Zero Soup to cart" data-label-expressive="Add I'i'i'i'i'i'i'i'nbox Z'e'e'e'e'e'e'e'e'e'ro S'o'o'o'o'o'o'o'o'o'up to cart" data-label-eci="‵vb62 ‵vs88 Add I'i'i'i'i'i'i'i'nbox Z'e'e'e'e'e'e'e'e'e'ro S'o'o'o'o'o'o'o'o'o'up to cart">Add</button>
+            </article>
+          </div>
+        </section>
+
+        <section id="drinks" class="panel" aria-labelledby="drinks-title">
+          <h2 id="drinks-title">Drinks</h2>
+          <div class="grid two">
+            <article class="card menu-item" data-id="tea">
+              <h3>Foggy Spreadsheet Tea</h3>
+              <p>Earl grey, oat milk, and a cinnamon subtotal.</p>
+              <p class="price">$4.25</p>
+              <button data-add="tea" data-label-plain="Add Foggy Spreadsheet Tea to cart" data-label-expressive="Add F'o'o'o'o'o'o'o'o'ggy Spr'e'e'e'e'e'e'e'e'adsheet T'e'e'e'e'e'e'e'ea to cart" data-label-eci="‵vb55 ‵vs78 Add F'o'o'o'o'o'o'o'o'ggy Spr'e'e'e'e'e'e'e'e'adsheet T'e'e'e'e'e'e'e'ea to cart">Add</button>
+            </article>
+            <article class="card menu-item" data-id="sparkle">
+              <h3>Emergency Sparkle Water</h3>
+              <p>Very serious seltzer with cucumber and mint.</p>
+              <p class="price">$3.80</p>
+              <button data-add="sparkle" data-label-plain="Add Emergency Sparkle Water to cart" data-label-expressive="Add E'e'e'e'e'e'e'mer'r'r'r'r'r'r'gen'cy Sp'a'a'a'a'a'a'ar'r'r'r'r'r'kle W'a'a'a'a'a'a'ter'r'r'r'r'r'r to cart" data-label-eci="‵vb90 ‵vs95 Add E'e'e'e'e'e'e'mer'r'r'r'r'r'r'gen'cy Sp'a'a'a'a'a'a'ar'r'r'r'r'r'kle W'a'a'a'a'a'a'ter'r'r'r'r'r'r to cart">Add</button>
+            </article>
+          </div>
+        </section>
+      </section>
+
+      <aside class="panel" aria-labelledby="cart-title">
+        <h2 id="cart-title">Cart</h2>
+        <div id="cartItems" class="stack" aria-live="polite">
+          <p class="muted">No items yet.</p>
+        </div>
+        <p class="total">Total: <span id="cartTotal">$0.00</span></p>
+        <button id="checkoutButton" class="warning" disabled>Checkout with dummy order</button>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accessible Status Panel Prototype</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to status panel</a>
+  <header>
+    <p><a href="index.html">Prototype directory</a></p>
+    <h1>Accessible Status Panel Prototype</h1>
+    <p>This page explores short live announcements for progress, warnings, errors, and recovery states.</p>
+  </header>
+  <main id="main">
+    <section class="page-note" aria-labelledby="desc-title">
+      <h2 id="desc-title">What This Prototype Explores</h2>
+      <p>Operational interfaces often need brief, unmistakable announcements. This prototype compares polite status updates, assertive alerts, and opt-in expressive text for urgency and completion.</p>
+    </section>
+
+    <section class="panel" aria-labelledby="controls-title">
+      <h2 id="controls-title">Announcement Controls</h2>
+      <label for="speech-style">Speech style</label>
+      <select id="speech-style">
+        <option value="plain">Plain announcements</option>
+        <option value="stretched">Syllable-stretched emphasis</option>
+        <option value="eci">Eloquence ECI-style emphasis</option>
+      </select>
+      <div class="controls" role="group" aria-label="Trigger status examples">
+        <button type="button" data-kind="sync">Start sync</button>
+        <button type="button" data-kind="warning">Low battery warning</button>
+        <button type="button" data-kind="error" class="danger">Payment retry error</button>
+        <button type="button" data-kind="done">Finish upload</button>
+      </div>
+      <div class="live-region" role="status" aria-live="polite" id="polite-region">No current updates.</div>
+      <div class="live-region" role="alert" id="alert-region">No current alerts.</div>
+    </section>
+
+    <section class="panel" aria-labelledby="queue-title">
+      <h2 id="queue-title">Example Queue</h2>
+      <div class="status-row">
+        <strong>Sync</strong>
+        <span>Recipe bookmarks from The Very Specific Soup Club</span>
+        <span class="badge" id="sync-badge">Idle</span>
+      </div>
+      <div class="status-row">
+        <strong>Battery</strong>
+        <span>Kitchen tablet used for fake checkout scanning</span>
+        <span class="badge warn" id="battery-badge">22%</span>
+      </div>
+      <div class="status-row">
+        <strong>Payment</strong>
+        <span>Dummy retry queue for pretend marketplace orders</span>
+        <span class="badge" id="payment-badge">Ready</span>
+      </div>
+      <div class="status-row">
+        <strong>Upload</strong>
+        <span>Forum image named definitely-not-a-screenshot.png</span>
+        <span class="badge" id="upload-badge">Waiting</span>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="samples-title">
+      <h2 id="samples-title">Speech Samples</h2>
+      <p class="speech-sample">Plain: Sync started. Four recipe bookmarks remaining.</p>
+      <p class="speech-sample">Stretched: S'y'y'y'y'y'n'n'n'n'c started. Four recipe bookmarks remaining.</p>
+      <p class="speech-sample">ECI-style: ‵vs56 ‵vb62 Sync started. Four recipe bookmarks remaining.</p>
+    </section>
+  </main>
+  <script>
+    const speechStyle = document.querySelector('#speech-style');
+    const polite = document.querySelector('#polite-region');
+    const alertRegion = document.querySelector('#alert-region');
+
+    const messages = {
+      sync: {
+        plain: 'Sync started. Four recipe bookmarks remaining.',
+        stretched: "S'y'y'y'y'y'n'n'n'n'c started. Four recipe bookmarks remaining.",
+        eci: '‵vs56 ‵vb62 Sync started. Four recipe bookmarks remaining.',
+        target: 'polite',
+        badge: '#sync-badge',
+        badgeText: 'Running'
+      },
+      warning: {
+        plain: 'Battery is low. Plug in within ten minutes.',
+        stretched: "B'a'a'a'a'a't't't't'e'e'e'e'r'r'r'r'y low. Plug in within ten minutes.",
+        eci: '‵vs46 ‵vb72 Battery is low. Plug in within ten minutes.',
+        target: 'alert',
+        badge: '#battery-badge',
+        badgeText: 'Low'
+      },
+      error: {
+        plain: 'Payment retry failed. Check the dummy card details.',
+        stretched: "R'e'e'e'e't'r'r'r'r'y failed. Check the dummy card details.",
+        eci: '‵vs42 ‵vb78 Payment retry failed. Check the dummy card details.',
+        target: 'alert',
+        badge: '#payment-badge',
+        badgeText: 'Needs review'
+      },
+      done: {
+        plain: 'Upload finished. The forum draft is ready.',
+        stretched: "D'o'o'o'o'n'e'e'e'e. Upload finished. The forum draft is ready.",
+        eci: '‵vs64 ‵vb65 Upload finished. The forum draft is ready.',
+        target: 'polite',
+        badge: '#upload-badge',
+        badgeText: 'Complete'
+      }
+    };
+
+    document.querySelectorAll('[data-kind]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const item = messages[button.dataset.kind];
+        const text = item[speechStyle.value];
+        document.querySelector(item.badge).textContent = item.badgeText;
+        if (item.target === 'alert') {
+          alertRegion.textContent = text;
+        } else {
+          polite.textContent = text;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
