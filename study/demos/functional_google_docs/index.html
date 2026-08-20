@@ -54,18 +54,18 @@
           type="button"
           aria-pressed="false"
           aria-controls="parkingLot"
-          aria-keyshortcuts="Control+Shift+P"
+          aria-keyshortcuts="Control+Alt+P"
         >
           Cursor parking lot
         </button>
-        <button id="replayCursors" type="button" aria-keyshortcuts="Control+Shift+C">Replay cursors</button>
-        <button id="overviewButton" type="button" aria-keyshortcuts="Control+Shift+V">Overview</button>
-        <button id="activeListButton" type="button" aria-keyshortcuts="Control+Shift+A">Active</button>
-        <button id="jumpButton" type="button" aria-keyshortcuts="Control+Shift+K">Jump</button>
-        <button id="followButton" type="button" aria-pressed="false" aria-keyshortcuts="Control+Shift+F">Follow</button>
-        <button id="helpButton" type="button" aria-keyshortcuts="Control+Shift+H">Keyboard shortcuts</button>
+        <button id="replayCursors" type="button" aria-keyshortcuts="Control+Alt+C">Replay cursors</button>
+        <button id="overviewButton" type="button" aria-keyshortcuts="Control+Alt+V">Overview</button>
+        <button id="activeListButton" type="button" aria-keyshortcuts="Control+Alt+A">Active</button>
+        <button id="jumpButton" type="button" aria-keyshortcuts="Control+Alt+K">Jump</button>
+        <button id="followButton" type="button" aria-pressed="false" aria-keyshortcuts="Control+Alt+F">Follow</button>
+        <button id="helpButton" type="button" aria-keyshortcuts="Control+Alt+H">Keyboard shortcuts</button>
         <details class="settings-menu" id="settingsMenu">
-          <summary aria-keyshortcuts="Control+Shift+M">Customize</summary>
+          <summary aria-keyshortcuts="Control+Alt+M">Customize</summary>
           <div class="settings-panel" aria-label="Customization settings">
             <label><input id="speechToggle" type="checkbox" checked> Speech</label>
             <label><input id="earconToggle" type="checkbox" checked> Earcons</label>
@@ -91,7 +91,7 @@
             role="textbox"
             aria-label="Meeting notes document"
             aria-multiline="true"
-            aria-keyshortcuts="Control+Shift+C"
+            aria-keyshortcuts="Control+Alt+C"
             contenteditable="true"
             spellcheck="true"
           >
@@ -148,7 +148,7 @@
 
         <aside class="activity-panel" aria-label="Activity log">
           <h2>Awareness</h2>
-          <div id="modeStatus" class="mode-status">Plain functional cues. Ctrl+Shift+C replays visible cursors.</div>
+          <div id="modeStatus" class="mode-status">Plain functional cues. Ctrl+Alt+C replays visible cursors.</div>
           <ol id="activityLog" class="activity-log"></ol>
         </aside>
       </main>
@@ -165,42 +165,42 @@
         <section>
           <h2>Cursor parking lot</h2>
           <p>Moves collaborator cursors to the bottom line so you can arrow through their positions.</p>
-          <p>Control+Shift+P</p>
+          <p>Control+Alt+P</p>
         </section>
         <section>
           <h2>Replay cursors</h2>
           <p>Plays the visible collaborator cursor sounds in document order.</p>
-          <p>Control+Shift+C</p>
+          <p>Control+Alt+C</p>
         </section>
         <section>
           <h2>Overview</h2>
           <p>Reads a section-by-section summary of cursors, comments, and suggested edits.</p>
-          <p>Control+Shift+V</p>
+          <p>Control+Alt+V</p>
         </section>
         <section>
           <h2>Active</h2>
           <p>Lists the collaborators currently visible in the document.</p>
-          <p>Control+Shift+A</p>
+          <p>Control+Alt+A</p>
         </section>
         <section>
           <h2>Jump</h2>
           <p>Moves the editing cursor to the next collaborator location.</p>
-          <p>Control+Shift+K</p>
+          <p>Control+Alt+K</p>
         </section>
         <section>
           <h2>Follow</h2>
           <p>Toggles periodic updates for the first active collaborator.</p>
-          <p>Control+Shift+F</p>
+          <p>Control+Alt+F</p>
         </section>
         <section>
           <h2>Customize</h2>
           <p>Opens the settings menu for speech, earcons, panning, activity, and density.</p>
-          <p>Control+Shift+M</p>
+          <p>Control+Alt+M</p>
         </section>
         <section>
           <h2>Keyboard shortcuts</h2>
           <p>Opens this keyboard shortcuts help dialog.</p>
-          <p>Control+Shift+H</p>
+          <p>Control+Alt+H</p>
         </section>
       </div>
     </dialog>
