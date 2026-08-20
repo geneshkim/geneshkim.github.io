@@ -54,18 +54,18 @@
           type="button"
           aria-pressed="false"
           aria-controls="parkingLot"
-          aria-keyshortcuts="Control+Shift+P"
+          aria-keyshortcuts="Control+Alt+P"
         >
           Cursor parking lot
         </button>
-        <button id="replayCursors" type="button" aria-keyshortcuts="Control+Shift+C">Replay cursors</button>
-        <button id="overviewButton" type="button" aria-keyshortcuts="Control+Shift+V">Soundscape</button>
-        <button id="activeListButton" type="button" aria-keyshortcuts="Control+Shift+A">Animals</button>
-        <button id="jumpButton" type="button" aria-keyshortcuts="Control+Shift+K">Visit</button>
-        <button id="followButton" type="button" aria-pressed="false" aria-keyshortcuts="Control+Shift+F">Follow</button>
-        <button id="helpButton" type="button" aria-keyshortcuts="Control+Shift+H">Keyboard shortcuts</button>
+        <button id="replayCursors" type="button" aria-keyshortcuts="Control+Alt+C">Replay cursors</button>
+        <button id="overviewButton" type="button" aria-keyshortcuts="Control+Alt+V">Soundscape</button>
+        <button id="activeListButton" type="button" aria-keyshortcuts="Control+Alt+A">Animals</button>
+        <button id="jumpButton" type="button" aria-keyshortcuts="Control+Alt+K">Visit</button>
+        <button id="followButton" type="button" aria-pressed="false" aria-keyshortcuts="Control+Alt+F">Follow</button>
+        <button id="helpButton" type="button" aria-keyshortcuts="Control+Alt+H">Keyboard shortcuts</button>
         <details class="settings-menu" id="settingsMenu">
-          <summary aria-keyshortcuts="Control+Shift+M">Customize</summary>
+          <summary aria-keyshortcuts="Control+Alt+M">Customize</summary>
           <div class="settings-panel" aria-label="Customization settings">
             <label><input id="speechToggle" type="checkbox" checked> Speech</label>
             <label><input id="prosodyToggle" type="checkbox" checked> Prosody commands</label>
@@ -92,7 +92,7 @@
             role="textbox"
             aria-label="Meeting notes document"
             aria-multiline="true"
-            aria-keyshortcuts="Control+Shift+C"
+            aria-keyshortcuts="Control+Alt+C"
             contenteditable="true"
             spellcheck="true"
           >
@@ -149,7 +149,7 @@
 
         <aside class="activity-panel" aria-label="Activity log">
           <h2>Presence</h2>
-          <div id="modeStatus" class="mode-status">Animal earcons with spatial cursor presence. Ctrl+Shift+C replays visible animals.</div>
+          <div id="modeStatus" class="mode-status">Animal earcons with spatial cursor presence. Ctrl+Alt+C replays visible animals.</div>
           <ol id="activityLog" class="activity-log"></ol>
         </aside>
       </main>
@@ -167,56 +167,56 @@
           <button type="button" aria-expanded="false" aria-controls="animalHelpParking">Cursor parking lot</button>
           <div id="animalHelpParking" hidden>
             <p>Moves collaborator cursors to the bottom line so you can arrow through their positions.</p>
-            <p>Control+Shift+P</p>
+            <p>Control+Alt+P</p>
           </div>
         </div>
         <div class="help-disclosure">
           <button type="button" aria-expanded="false" aria-controls="animalHelpReplay">Replay cursors</button>
           <div id="animalHelpReplay" hidden>
             <p>Plays the visible collaborator cursor sounds in document order.</p>
-            <p>Control+Shift+C</p>
+            <p>Control+Alt+C</p>
           </div>
         </div>
         <div class="help-disclosure">
           <button type="button" aria-expanded="false" aria-controls="animalHelpSoundscape">Overview</button>
           <div id="animalHelpSoundscape" hidden>
             <p>Reads a section-by-section summary of cursors, comments, and suggested edits.</p>
-            <p>Control+Shift+V</p>
+            <p>Control+Alt+V</p>
           </div>
         </div>
         <div class="help-disclosure">
           <button type="button" aria-expanded="false" aria-controls="animalHelpAnimals">Active</button>
           <div id="animalHelpAnimals" hidden>
             <p>Lists the collaborators currently visible in the document.</p>
-            <p>Control+Shift+A</p>
+            <p>Control+Alt+A</p>
           </div>
         </div>
         <div class="help-disclosure">
           <button type="button" aria-expanded="false" aria-controls="animalHelpVisit">Jump</button>
           <div id="animalHelpVisit" hidden>
             <p>Moves the editing cursor to the next collaborator location.</p>
-            <p>Control+Shift+K</p>
+            <p>Control+Alt+K</p>
           </div>
         </div>
         <div class="help-disclosure">
           <button type="button" aria-expanded="false" aria-controls="animalHelpFollow">Follow</button>
           <div id="animalHelpFollow" hidden>
             <p>Toggles periodic updates for the first active collaborator.</p>
-            <p>Control+Shift+F</p>
+            <p>Control+Alt+F</p>
           </div>
         </div>
         <div class="help-disclosure">
           <button type="button" aria-expanded="false" aria-controls="animalHelpCustomize">Customize</button>
           <div id="animalHelpCustomize" hidden>
             <p>Opens the settings menu for speech, earcons, panning, activity, and density.</p>
-            <p>Control+Shift+M</p>
+            <p>Control+Alt+M</p>
           </div>
         </div>
         <div class="help-disclosure">
           <button type="button" aria-expanded="false" aria-controls="animalHelpShortcuts">Keyboard shortcuts</button>
           <div id="animalHelpShortcuts" hidden>
             <p>Opens this keyboard shortcuts help dialog.</p>
-            <p>Control+Shift+H</p>
+            <p>Control+Alt+H</p>
           </div>
         </div>
       </div>
