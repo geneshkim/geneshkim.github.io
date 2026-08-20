@@ -137,7 +137,7 @@
   };
   const settings = {
     speech: true,
-    prosody: true,
+    prosody: false,
     earcons: true,
     panning: true,
     activity: true,
