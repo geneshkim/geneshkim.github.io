@@ -917,7 +917,7 @@
   }
 
   function handleShortcut(event) {
-    if (!event.ctrlKey || !event.altKey || event.shiftKey || event.metaKey) return;
+    if (!event.ctrlKey || event.altKey || !event.shiftKey || event.metaKey) return;
 
     const key = event.key.toLowerCase();
     const shortcutActions = {
