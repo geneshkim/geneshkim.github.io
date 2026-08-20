@@ -54,18 +54,18 @@
           type="button"
           aria-pressed="false"
           aria-controls="parkingLot"
-          aria-keyshortcuts="Control+Alt+P"
+          aria-keyshortcuts="Control+Shift+P"
         >
           Cursor parking lot
         </button>
-        <button id="replayCursors" type="button" aria-keyshortcuts="Control+Alt+C">Replay marks</button>
-        <button id="overviewButton" type="button" aria-keyshortcuts="Control+Alt+V">Skim</button>
-        <button id="activeListButton" type="button" aria-keyshortcuts="Control+Alt+A">Marks</button>
-        <button id="jumpButton" type="button" aria-keyshortcuts="Control+Alt+K">Turn to</button>
-        <button id="followButton" type="button" aria-pressed="false" aria-keyshortcuts="Control+Alt+F">Trace</button>
-        <button id="helpButton" type="button" aria-keyshortcuts="Control+Alt+H">Keyboard shortcuts</button>
+        <button id="replayCursors" type="button" aria-keyshortcuts="Control+Shift+C">Replay marks</button>
+        <button id="overviewButton" type="button" aria-keyshortcuts="Control+Shift+V">Skim</button>
+        <button id="activeListButton" type="button" aria-keyshortcuts="Control+Shift+A">Marks</button>
+        <button id="jumpButton" type="button" aria-keyshortcuts="Control+Shift+K">Turn to</button>
+        <button id="followButton" type="button" aria-pressed="false" aria-keyshortcuts="Control+Shift+F">Trace</button>
+        <button id="helpButton" type="button" aria-keyshortcuts="Control+Shift+H">Keyboard shortcuts</button>
         <details class="settings-menu" id="settingsMenu">
-          <summary aria-keyshortcuts="Control+Alt+M">Customize</summary>
+          <summary aria-keyshortcuts="Control+Shift+M">Customize</summary>
           <div class="settings-panel" aria-label="Customization settings">
             <label><input id="speechToggle" type="checkbox" checked> Speech</label>
             <label><input id="earconToggle" type="checkbox" checked> Earcons</label>
@@ -91,7 +91,7 @@
             role="textbox"
             aria-label="Meeting notes document"
             aria-multiline="true"
-            aria-keyshortcuts="Control+Alt+C"
+            aria-keyshortcuts="Control+Shift+C"
             contenteditable="true"
             spellcheck="true"
           >
@@ -148,7 +148,7 @@
 
         <aside class="activity-panel" aria-label="Activity log">
           <h2>Margin</h2>
-          <div id="modeStatus" class="mode-status">Pencil, paper, margin, and sticky-note cues. Ctrl+Alt+C replays visible marks.</div>
+          <div id="modeStatus" class="mode-status">Pencil, paper, margin, and sticky-note cues. Ctrl+Shift+C replays visible marks.</div>
           <ol id="activityLog" class="activity-log"></ol>
         </aside>
       </main>
@@ -174,42 +174,42 @@
             <tr>
               <td>Cursor parking lot</td>
               <td>Moves collaborator cursors to the bottom line so you can arrow through their positions.</td>
-              <td>Control+Alt+P</td>
+              <td>Control+Shift+P</td>
             </tr>
             <tr>
               <td>Replay cursors</td>
               <td>Plays the visible collaborator cursor sounds in document order.</td>
-              <td>Control+Alt+C</td>
+              <td>Control+Shift+C</td>
             </tr>
             <tr>
               <td>Overview</td>
               <td>Reads a section-by-section summary of cursors, comments, and suggested edits.</td>
-              <td>Control+Alt+V</td>
+              <td>Control+Shift+V</td>
             </tr>
             <tr>
               <td>Active</td>
               <td>Lists the collaborators currently visible in the document.</td>
-              <td>Control+Alt+A</td>
+              <td>Control+Shift+A</td>
             </tr>
             <tr>
               <td>Jump</td>
               <td>Moves the editing cursor to the next collaborator location.</td>
-              <td>Control+Alt+K</td>
+              <td>Control+Shift+K</td>
             </tr>
             <tr>
               <td>Follow</td>
               <td>Toggles periodic updates for the first active collaborator.</td>
-              <td>Control+Alt+F</td>
+              <td>Control+Shift+F</td>
             </tr>
             <tr>
               <td>Customize</td>
               <td>Opens the settings menu for speech, earcons, panning, activity, and density.</td>
-              <td>Control+Alt+M</td>
+              <td>Control+Shift+M</td>
             </tr>
             <tr>
               <td>Keyboard shortcuts</td>
               <td>Opens this keyboard shortcuts help dialog.</td>
-              <td>Control+Alt+H</td>
+              <td>Control+Shift+H</td>
             </tr>
           </tbody>
         </table>
